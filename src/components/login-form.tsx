@@ -78,8 +78,11 @@ export function LoginForm() {
             </Link>
           </div>
           {error && <div className='text-red-500 text-sm text-center'>{error}</div>}
-          <Button type='submit' className='w-full' disabled={loading}>
-            {loading ? 'Signing in...' : 'Sign in'}
+          <Button type='submit' className='w-full bg-green-600 hover:bg-green-700 text-white' disabled={loading}>
+            {loading ? 'Accesso in corso...' : 'Accedi'}
+          </Button>
+          <Button variant='outline' className='w-full border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50'>
+            Registrati
           </Button>
           <Button variant='outline' className='w-full'>
             Login with Google

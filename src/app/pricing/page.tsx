@@ -1,54 +1,57 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 export default function PricingPage() {
   const plans = [
     {
-      name: "Starter",
-      price: "Free",
-      description: "Perfect for trying out our platform",
+      name: "Base",
+      price: "Gratis",
+      description: "Perfetto per provare la nostra piattaforma",
       features: [
-        "Up to 3 projects",
-        "Basic analytics",
-        "24/7 support",
-        "Community access",
-        "1 team member"
+        "Fino a 3 progetti",
+        "Analisi di base",
+        "Supporto 24/7",
+        "Accesso alla community",
+        "1 membro del team"
       ],
-      cta: "Get Started",
+      cta: "Inizia Ora",
       popular: false
     },
     {
       name: "Pro",
-      price: "$29",
-      period: "/month",
-      description: "Best for professional developers",
+      price: "29€",
+      period: "/mese",
+      description: "Ideale per professionisti",
       features: [
-        "Unlimited projects",
-        "Advanced analytics",
-        "Priority support",
-        "Custom domains",
-        "10 team members",
-        "Advanced security",
-        "API access"
+        "Progetti illimitati",
+        "Analisi avanzate",
+        "Supporto prioritario",
+        "Domini personalizzati",
+        "10 membri del team",
+        "Sicurezza avanzata",
+        "Accesso API"
       ],
-      cta: "Start Trial",
+      cta: "Prova Gratuita",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$99",
-      period: "/month",
-      description: "For large teams and organizations",
+      price: "99€",
+      period: "/mese",
+      description: "Per grandi team e organizzazioni",
       features: [
-        "Everything in Pro",
-        "Unlimited team members",
-        "Custom integrations",
-        "Dedicated support",
-        "SLA guarantee",
-        "Advanced security",
-        "Custom contracts"
+        "Tutto del piano Pro",
+        "Membri del team illimitati",
+        "Integrazioni personalizzate",
+        "Supporto dedicato",
+        "Garanzia SLA",
+        "Sicurezza avanzata",
+        "Contratti personalizzati"
       ],
-      cta: "Contact Sales",
+      cta: "Contattaci",
       popular: false
     }
   ]
@@ -60,10 +63,10 @@ export default function PricingPage() {
           <div className="flex flex-col items-center space-y-8 text-center">
             <div className="space-y-4 max-w-3xl mx-auto">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                Simple, transparent pricing
+                Prezzi semplici e trasparenti
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                Choose the perfect plan for your needs. Always know what you&apos;ll pay.
+                Scegli il piano perfetto per le tue esigenze. Saprai sempre quanto pagherai.
               </p>
             </div>
           </div>
@@ -78,13 +81,13 @@ export default function PricingPage() {
                 key={i}
                 className={`relative flex flex-col p-6 bg-background rounded-xl border ${
                   plan.popular
-                    ? "border-primary shadow-lg scale-105"
+                    ? "border-green-600 shadow-lg scale-105"
                     : "border-border"
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-5 left-0 right-0 mx-auto w-32 rounded-full bg-primary px-3 py-1 text-center text-sm text-primary-foreground">
-                    Most Popular
+                  <div className="absolute -top-5 left-0 right-0 mx-auto w-32 rounded-full bg-green-600 px-3 py-1 text-center text-sm text-primary-foreground">
+                    Più Popolare
                   </div>
                 )}
                 <div className="space-y-4">
@@ -103,7 +106,12 @@ export default function PricingPage() {
                 </div>
                 <div className="mt-8">
                   <Button
-                    className="w-full"
+                    className={cn(
+                      "w-full",
+                      plan.popular
+                        ? "bg-green-600 hover:bg-green-700 text-white"
+                        : "border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50"
+                    )}
                     variant={plan.popular ? "default" : "outline"}
                   >
                     {plan.cta}
@@ -130,14 +138,18 @@ export default function PricingPage() {
           <div className="flex flex-col items-center justify-center space-y-8 text-center">
             <div className="space-y-4 max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                Need something different?
+                Hai bisogno di qualcosa di diverso?
               </h2>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-lg dark:text-gray-400">
-                Contact our sales team for custom pricing options. We&apos;re here to help you find the perfect solution.
+                Contatta il nostro team commerciale per opzioni di prezzo personalizzate. Siamo qui per aiutarti a trovare la soluzione perfetta.
               </p>
             </div>
-            <Button size="lg" variant="outline" className="h-11 px-8">
-              Contact Sales
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="h-11 px-8 border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50"
+            >
+              Contatta Vendite
             </Button>
           </div>
         </div>

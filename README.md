@@ -1,56 +1,42 @@
-# Persevida SL
+# Legal Logger
 
-Empresa de desarrollo de software ubicada en la Zona Especial Canaria (ZEC), Tenerife. Especialistas en soluciones tecnológicas innovadoras.
+A modern web application built with Next.js 15.0, React, and Tailwind CSS.
 
-## Características
+## Features
 
-- 🌓 Modo claro/oscuro con soporte de preferencia del sistema
-- 🎨 Interfaz moderna y limpia usando Tailwind CSS
-- 🧩 Componentes reutilizables construidos con shadcn/ui
-- 📱 Diseño totalmente responsive
-- ⚡ Carga rápida de páginas con Next.js 14
-- 🔒 Sistema de autenticación
-- 🎭 Animaciones elegantes con Framer Motion
+- Modern UI with Tailwind CSS
+- Server-side rendering with Next.js 15.0
+- Responsive design
+- Dark mode support
+- Smooth animations
+- Type-safe with TypeScript
 
-## Stack Tecnológico
+## Getting Started
 
-- Next.js 14
-- TypeScript
+First, install the dependencies:
+
+```bash
+pnpm install
+```
+
+Then, run the development server:
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Technologies
+
+- Next.js 15.0
+- React 18
 - Tailwind CSS
-- shadcn/ui
+- TypeScript
 - Framer Motion
 - Lucide Icons
+- Shadcn UI
 
-## Inicio Rápido
+## License
 
-1. Clonar el repositorio:
-\`\`\`bash
-git clone https://github.com/crottolo/persevida_website.git
-\`\`\`
-
-2. Instalar dependencias:
-\`\`\`bash
-pnpm install
-\`\`\`
-
-3. Iniciar el servidor de desarrollo:
-\`\`\`bash
-pnpm dev
-\`\`\`
-
-4. Abrir [http://localhost:3000](http://localhost:3000) en el navegador para ver el resultado.
-
-## Estructura del Proyecto
-
-- `/src/app/*` - Páginas y layouts del App Router
-- `/src/components/*` - Componentes React
-- `/src/components/ui/*` - Componentes UI de shadcn/ui
-- `/src/lib/*` - Funciones de utilidad y código compartido
-
-## Contribuir
-
-Las pull requests son bienvenidas. Para cambios importantes, por favor abra un issue primero para discutir lo que le gustaría cambiar.
-
-## Licencia
-
-[MIT](https://choosealicense.com/licenses/mit/)
+MIT

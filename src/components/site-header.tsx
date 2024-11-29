@@ -27,9 +27,10 @@ export function SiteHeader() {
   const { user, setUser } = useAuth()
 
   const menuItems = [
-    { href: "/features", label: "Features" },
-    { href: "/pricing", label: "Pricing" },
-    { href: "/about", label: "About" },
+    { href: "/documents", label: "Documenti" },
+    { href: "/pricing", label: "Prezzi" },
+    { href: "/cases", label: "Casi" },
+    { href: "/about", label: "Chi Siamo" }
   ]
 
   const handleLogout = async () => {
@@ -43,13 +44,13 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-8 max-w-7xl mx-auto">
         <Link href="/" className="flex items-center space-x-2">
           <Image 
-            src="/logo.svg" 
-            alt="Logo" 
+            src="/ll-logo.svg" 
+            alt="Legal Logger Logo" 
             width={32} 
             height={32}
             className="dark:invert"
           />
-          <span className="font-bold text-xl hidden sm:inline-block">Persevida</span>
+          <span className="font-bold">Legal Logger</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -59,7 +60,7 @@ export function SiteHeader() {
               {menuItems.map((item) => (
                 <NavigationMenuItem key={item.href}>
                   <Link href={item.href} legacyBehavior passHref>
-                    <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-primary">
+                    <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-green-600 dark:hover:text-green-400">
                       {item.label}
                     </NavigationMenuLink>
                   </Link>
@@ -81,27 +82,27 @@ export function SiteHeader() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                  <DropdownMenuLabel>Il Mio Account</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={() => router.push("/dashboard")}>
                     Dashboard
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={handleLogout}>
                     <LogOut className="mr-2 h-4 w-4" />
-                    Logout
+                    Esci
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
               <>
                 <Link href="/login">
-                  <Button variant="ghost" size="sm">
-                    Login
+                  <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700 hover:bg-green-50">
+                    Accedi
                   </Button>
                 </Link>
                 <Link href="/register">
-                  <Button size="sm">
-                    Get Started
+                  <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white">
+                    Inizia Ora
                   </Button>
                 </Link>
               </>
@@ -118,7 +119,7 @@ export function SiteHeader() {
             </SheetTrigger>
             <AnimatedSheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
-                <SheetTitle>Navigation Menu</SheetTitle>
+                <SheetTitle>Menu di Navigazione</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-4 mt-6">
                 <MenuItem
@@ -132,13 +133,13 @@ export function SiteHeader() {
                       className="flex items-center space-x-2"
                     >
                       <Image 
-                        src="/logo.svg" 
-                        alt="Logo" 
+                        src="/ll-logo.svg" 
+                        alt="Legal Logger Logo" 
                         width={24} 
                         height={24}
                         className="dark:invert"
                       />
-                      <span className="font-bold">Persevida</span>
+                      <span className="font-bold">Legal Logger</span>
                     </Link>
                   </SheetClose>
                 </MenuItem>
@@ -154,7 +155,7 @@ export function SiteHeader() {
                       <SheetClose asChild>
                         <Link
                           href={item.href}
-                          className="text-sm font-medium transition-colors hover:text-primary"
+                          className="text-sm font-medium transition-colors hover:text-green-600 dark:hover:text-green-400"
                         >
                           {item.label}
                         </Link>
@@ -186,14 +187,14 @@ export function SiteHeader() {
                       >
                         <Button 
                           variant="ghost" 
-                          className="w-full justify-start gap-2"
+                          className="w-full justify-start gap-2 text-green-600 hover:text-green-700 hover:bg-green-50 dark:text-green-400 dark:hover:text-green-300 dark:hover:bg-green-950"
                           onClick={() => {
                             handleLogout()
                             setOpen(false)
                           }}
                         >
                           <LogOut className="h-4 w-4" />
-                          Logout
+                          Esci
                         </Button>
                       </MenuItem>
                     </>
@@ -206,8 +207,8 @@ export function SiteHeader() {
                       >
                         <SheetClose asChild>
                           <Link href="/login">
-                            <Button variant="ghost" className="w-full justify-start">
-                              Login
+                            <Button variant="ghost" className="w-full justify-start text-green-600 hover:text-green-700 hover:bg-green-50">
+                              Accedi
                             </Button>
                           </Link>
                         </SheetClose>
@@ -219,8 +220,8 @@ export function SiteHeader() {
                       >
                         <SheetClose asChild>
                           <Link href="/register">
-                            <Button className="w-full">
-                              Get Started
+                            <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                              Inizia Ora
                             </Button>
                           </Link>
                         </SheetClose>

@@ -1,132 +1,152 @@
-import { FadeInImage } from "@/components/ui/fade-in-image"
+"use client";
+
 import { Button } from "@/components/ui/button"
+import { FadeInImage } from "@/components/ui/fade-in-image"
+import { Shield, Users, Building, Award } from "lucide-react"
+import Link from "next/link"
 
 export default function AboutPage() {
-  const team = [
+  const stats = [
     {
-      name: "John Doe",
-      role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop"
+      icon: Shield,
+      value: "100%",
+      label: "Conformità GDPR",
+      description: "Piena conformità con le normative sulla protezione dei dati"
     },
     {
-      name: "Jane Smith",
-      role: "CTO",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2787&auto=format&fit=crop"
+      icon: Users,
+      value: "1000+",
+      label: "Clienti Attivi",
+      description: "Aziende che si fidano di noi ogni giorno"
     },
     {
-      name: "Mike Johnson",
-      role: "Lead Designer",
-      image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=2787&auto=format&fit=crop"
+      icon: Building,
+      value: "50+",
+      label: "Partner",
+      description: "Network di partner certificati in tutta Italia"
+    },
+    {
+      icon: Award,
+      value: "10+",
+      label: "Anni di Esperienza",
+      description: "Nel campo della sicurezza informatica e compliance"
     }
   ]
 
   return (
-    <div className="flex flex-col items-center w-full">
-      {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                About Our Company
-              </h1>
-              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                We&apos;re building the future of web development with modern tools and technologies.
-              </p>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black to-gray-900">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
+                  Proteggiamo il Futuro Digitale delle Aziende
+                </h1>
+                <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
+                  Dal 2013 aiutiamo le aziende a proteggere i loro dati sensibili con soluzioni innovative e certificate
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Mission Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter">Our Mission</h2>
-              <p className="text-gray-500 dark:text-gray-400">
-                We&apos;re on a mission to make web development more accessible, efficient, and enjoyable for everyone.
-                Our platform combines cutting-edge technology with intuitive design to create the best possible
-                experience for developers.
-              </p>
-              <ul className="space-y-2 text-gray-500 dark:text-gray-400">
-                <li className="flex items-center">
-                  <span className="mr-2">•</span>
-                  Building innovative solutions
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2">•</span>
-                  Supporting developer communities
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2">•</span>
-                  Creating sustainable technology
-                </li>
-              </ul>
+        {/* Stats Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
+          <div className="container px-4 md:px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, i) => (
+                <div key={i} className="flex flex-col items-center space-y-4 text-center">
+                  <div className="p-4 bg-green-600/10 rounded-full">
+                    <stat.icon className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div className="space-y-2">
+                    <h2 className="text-3xl font-bold text-white">{stat.value}</h2>
+                    <p className="text-xl font-medium text-green-600">{stat.label}</p>
+                    <p className="text-gray-400">{stat.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <FadeInImage
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop"
-              alt="Team working together"
-              width={800}
-              height={600}
-              className="w-full aspect-video"
-            />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Team Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900/50">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Meet Our Team
-              </h2>
-              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                The talented people behind our success
-              </p>
-            </div>
-          </div>
-          <div className="grid gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
-            {team.map((member, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-lg">
-                <FadeInImage
-                  src={member.image}
-                  alt={member.name}
-                  width={400}
-                  height={500}
-                  className="aspect-[3/4] w-full"
-                />
-                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent p-6 text-white opacity-0 transition-opacity group-hover:opacity-100">
-                  <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="text-sm">{member.role}</p>
+        {/* Mission Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-black">
+          <div className="container px-4 md:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+                  La Nostra Missione
+                </h2>
+                <p className="text-gray-400 md:text-xl">
+                  Crediamo che la sicurezza dei dati sia un diritto fondamentale per ogni azienda. 
+                  La nostra missione è rendere la protezione dei dati accessibile, efficace e conforme alle normative.
+                </p>
+                <div className="space-y-2">
+                  <p className="text-gray-400">
+                    • Protezione proattiva contro le minacce informatiche
+                  </p>
+                  <p className="text-gray-400">
+                    • Conformità garantita con le normative vigenti
+                  </p>
+                  <p className="text-gray-400">
+                    • Supporto continuo e formazione dedicata
+                  </p>
+                </div>
+                <div className="pt-4">
+                  <Link href="/contact">
+                    <Button className="bg-green-600 hover:bg-green-700 text-white">
+                      Contattaci
+                    </Button>
+                  </Link>
                 </div>
               </div>
-            ))}
+              <div className="relative">
+                <FadeInImage
+                  src="/about-image.jpg"
+                  alt="Legal Logger Team"
+                  width={600}
+                  height={400}
+                  className="rounded-xl shadow-2xl"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                Join Our Journey
-              </h2>
-              <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                Let&apos;s build the future together.
-              </p>
-            </div>
-            <div className="space-x-4">
-              <Button size="lg">Get Started</Button>
-              <Button variant="outline" size="lg">Contact Us</Button>
+        {/* CTA Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+                  Pronti a Proteggere i Tuoi Dati?
+                </h2>
+                <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
+                  Scopri come Legal Logger può aiutare la tua azienda a proteggere i dati sensibili
+                </p>
+              </div>
+              <div className="space-x-4">
+                <Link href="/register">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white">
+                    Inizia Ora
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button 
+                    variant="outline" 
+                    className="border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50"
+                  >
+                    Parliamone
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   )
 } 
