@@ -34,18 +34,19 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-1">
+    <div className='flex flex-col min-h-screen'>
+      <main className='flex-1'>
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black to-gray-900">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
+        <section className='w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-black to-gray-900'>
+          <div className='container mx-auto px-4 md:px-6'>
+            <div className='flex flex-col items-center space-y-4 text-center'>
+              <div className='space-y-2'>
+                <h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white'>
                   Proteggiamo il Futuro Digitale delle Aziende
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
-                  Dal 2013 aiutiamo le aziende a proteggere i loro dati sensibili con soluzioni innovative e certificate
+                <p className='mx-auto max-w-[700px] text-gray-400 md:text-xl'>
+                  Dal 2013 aiutiamo le aziende a proteggere i loro dati sensibili con soluzioni
+                  innovative e certificate
                 </p>
               </div>
             </div>
@@ -53,18 +54,18 @@ export default function AboutPage() {
         </section>
 
         {/* Stats Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className='w-full py-12 md:py-24 lg:py-32 bg-black'>
+          <div className='container px-4 md:px-6 mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {stats.map((stat, i) => (
-                <div key={i} className="flex flex-col items-center space-y-4 text-center">
-                  <div className="p-4 bg-green-600/10 rounded-full">
-                    <stat.icon className="h-6 w-6 text-green-600" />
+                <div key={i} className='flex flex-col items-center space-y-4 text-center'>
+                  <div className='p-4 bg-green-600/10 rounded-full'>
+                    <stat.icon className='h-6 w-6 text-green-600' />
                   </div>
-                  <div className="space-y-2">
-                    <h2 className="text-3xl font-bold text-white">{stat.value}</h2>
-                    <p className="text-xl font-medium text-green-600">{stat.label}</p>
-                    <p className="text-gray-400">{stat.description}</p>
+                  <div className='space-y-2'>
+                    <h2 className='text-3xl font-bold text-white'>{stat.value}</h2>
+                    <p className='text-xl font-medium text-green-600'>{stat.label}</p>
+                    <p className='text-gray-400'>{stat.description}</p>
                   </div>
                 </div>
               ))}
@@ -73,43 +74,40 @@ export default function AboutPage() {
         </section>
 
         {/* Mission Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-black">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+        <section className='w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-black'>
+          <div className='container px-4 md:px-6 mx-auto'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+              <div className='space-y-4'>
+                <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white'>
                   La Nostra Missione
                 </h2>
-                <p className="text-gray-400 md:text-xl">
-                  Crediamo che la sicurezza dei dati sia un diritto fondamentale per ogni azienda. 
-                  La nostra missione è rendere la protezione dei dati accessibile, efficace e conforme alle normative.
+                <p className='text-gray-400 md:text-xl'>
+                  Crediamo che la sicurezza dei dati sia un diritto fondamentale per ogni azienda.
+                  La nostra missione è rendere la protezione dei dati accessibile, efficace e
+                  conforme alle normative.
                 </p>
-                <div className="space-y-2">
-                  <p className="text-gray-400">
+                <div className='space-y-2'>
+                  <p className='text-gray-400'>
                     • Protezione proattiva contro le minacce informatiche
                   </p>
-                  <p className="text-gray-400">
-                    • Conformità garantita con le normative vigenti
-                  </p>
-                  <p className="text-gray-400">
-                    • Supporto continuo e formazione dedicata
-                  </p>
+                  <p className='text-gray-400'>• Conformità garantita con le normative vigenti</p>
+                  <p className='text-gray-400'>• Supporto continuo e formazione dedicata</p>
                 </div>
-                <div className="pt-4">
-                  <Link href="/contact">
-                    <Button className="bg-green-600 hover:bg-green-700 text-white">
+                <div className='pt-4'>
+                  <Link href='/contact'>
+                    <Button className='bg-green-600 hover:bg-green-700 text-white'>
                       Contattaci
                     </Button>
                   </Link>
                 </div>
               </div>
-              <div className="relative">
+              <div className='relative'>
                 <FadeInImage
-                  src="/about-image.jpg"
-                  alt="Legal Logger Team"
+                  src='/LL_visual_col.png'
+                  alt='Legal Logger Team'
                   width={600}
                   height={400}
-                  className="rounded-xl shadow-2xl"
+                  className='rounded-xl shadow-2xl'
                 />
               </div>
             </div>
@@ -117,28 +115,25 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+        <section className='w-full py-12 md:py-24 lg:py-32 bg-black'>
+          <div className='container px-4 md:px-6 mx-auto'>
+            <div className='flex flex-col items-center space-y-4 text-center'>
+              <div className='space-y-2'>
+                <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white'>
                   Pronti a Proteggere i Tuoi Dati?
                 </h2>
-                <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
+                <p className='mx-auto max-w-[700px] text-gray-400 md:text-xl'>
                   Scopri come Legal Logger può aiutare la tua azienda a proteggere i dati sensibili
                 </p>
               </div>
-              <div className="space-x-4">
-                <Link href="/register">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white">
-                    Inizia Ora
-                  </Button>
+              <div className='space-x-4'>
+                <Link href='/register'>
+                  <Button className='bg-green-600 hover:bg-green-700 text-white'>Inizia Ora</Button>
                 </Link>
-                <Link href="/contact">
-                  <Button 
-                    variant="outline" 
-                    className="border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50"
-                  >
+                <Link href='/contact'>
+                  <Button
+                    variant='outline'
+                    className='border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50'>
                     Parliamone
                   </Button>
                 </Link>
@@ -148,5 +143,5 @@ export default function AboutPage() {
         </section>
       </main>
     </div>
-  )
+  );
 } 

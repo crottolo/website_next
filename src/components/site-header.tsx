@@ -44,7 +44,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-8 max-w-7xl mx-auto">
         <Link href="/" className="flex items-center space-x-2">
           <Image 
-            src="/ll-logo.svg" 
+            src="/LL_visual_col.png" 
             alt="Legal Logger Logo" 
             width={32} 
             height={32}
