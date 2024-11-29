@@ -6,20 +6,37 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuL
 import { ThemeToggle } from "./theme-toggle"
 import { Button } from "./ui/button"
 import { Sheet, SheetTrigger, SheetHeader, SheetTitle, SheetClose } from "./ui/sheet"
-import { Menu } from "lucide-react"
+import { LogOut, Menu, User } from "lucide-react"
 import { AnimatedSheetContent, MenuItemAnimation, MenuItem } from "./ui/animated-sheet"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import { useAuth } from "@/context/AuthContext"
+import { logout } from "@/lib/odooService"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
   const router = useRouter()
+  const { user, setUser } = useAuth()
 
   const menuItems = [
     { href: "/features", label: "Features" },
     { href: "/pricing", label: "Pricing" },
     { href: "/about", label: "About" },
   ]
+
+  const handleLogout = async () => {
+    await logout("")
+    setUser(null)
+    router.push("/")
+  }
 
   const handleNavigation = (href: string) => {
     setOpen(false)
@@ -60,14 +77,40 @@ export function SiteHeader() {
         <div className="flex items-center gap-4">
           <ThemeToggle />
           <div className="hidden md:flex items-center gap-2">
-            <Link href="/login">
-              <Button variant="ghost" size="sm">
-                Login
-              </Button>
-            </Link>
-            <Button size="sm">
-              Get Started
-            </Button>
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="gap-2">
+                    <User className="h-4 w-4" />
+                    {user.name}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={() => router.push("/dashboard")}>
+                    Dashboard
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleLogout}>
+                    <LogOut className="mr-2 h-4 w-4" />
+                    Logout
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <>
+                <Link href="/login">
+                  <Button variant="ghost" size="sm">
+                    Login
+                  </Button>
+                </Link>
+                <Link href="/register">
+                  <Button size="sm">
+                    Get Started
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu */}
@@ -100,7 +143,7 @@ export function SiteHeader() {
                         height={24}
                         className="dark:invert"
                       />
-                      <span className="font-bold">YourBrand</span>
+                      <span className="font-bold">Persevida</span>
                     </Link>
                   </SheetClose>
                 </MenuItem>
@@ -125,30 +168,70 @@ export function SiteHeader() {
                   ))}
                 </div>
                 <div className="flex flex-col gap-2 mt-4">
-                  <MenuItem
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    <SheetClose asChild>
-                      <Link href="/login">
-                        <Button variant="ghost" className="w-full justify-start">
-                          Login
+                  {user ? (
+                    <>
+                      <MenuItem
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                      >
+                        <SheetClose asChild>
+                          <Link href="/dashboard">
+                            <Button variant="ghost" className="w-full justify-start gap-2">
+                              <User className="h-4 w-4" />
+                              Dashboard
+                            </Button>
+                          </Link>
+                        </SheetClose>
+                      </MenuItem>
+                      <MenuItem
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                      >
+                        <Button 
+                          variant="ghost" 
+                          className="w-full justify-start gap-2"
+                          onClick={() => {
+                            handleLogout()
+                            setOpen(false)
+                          }}
+                        >
+                          <LogOut className="h-4 w-4" />
+                          Logout
                         </Button>
-                      </Link>
-                    </SheetClose>
-                  </MenuItem>
-                  <MenuItem
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    <SheetClose asChild>
-                      <Button className="w-full">
-                        Get Started
-                      </Button>
-                    </SheetClose>
-                  </MenuItem>
+                      </MenuItem>
+                    </>
+                  ) : (
+                    <>
+                      <MenuItem
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                      >
+                        <SheetClose asChild>
+                          <Link href="/login">
+                            <Button variant="ghost" className="w-full justify-start">
+                              Login
+                            </Button>
+                          </Link>
+                        </SheetClose>
+                      </MenuItem>
+                      <MenuItem
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                      >
+                        <SheetClose asChild>
+                          <Link href="/register">
+                            <Button className="w-full">
+                              Get Started
+                            </Button>
+                          </Link>
+                        </SheetClose>
+                      </MenuItem>
+                    </>
+                  )}
                 </div>
               </nav>
             </AnimatedSheetContent>

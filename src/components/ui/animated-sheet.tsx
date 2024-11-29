@@ -41,6 +41,6 @@ const MenuItemAnimation = {
   }),
 }
 
-const MenuItem = motion(motion.div)
+const MenuItem = motion.create(motion.div)
 
 export { AnimatedSheetContent, MenuItemAnimation, MenuItem } 

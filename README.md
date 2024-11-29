@@ -1,18 +1,18 @@
-# Persevida Website
+# Persevida SL
 
-A modern Next.js website with theme switching and beautiful UI components.
+Empresa de desarrollo de software ubicada en la Zona Especial Canaria (ZEC), Tenerife. Especialistas en soluciones tecnológicas innovadoras.
 
-## Features
+## Características
 
-- 🌓 Dark/Light mode with system preference support
-- 🎨 Modern and clean UI using Tailwind CSS
-- 🧩 Reusable components built with shadcn/ui
-- 📱 Fully responsive design
-- ⚡ Fast page loads with Next.js 14
-- 🔒 Authentication ready
-- 🎭 Beautiful animations with Framer Motion
+- 🌓 Modo claro/oscuro con soporte de preferencia del sistema
+- 🎨 Interfaz moderna y limpia usando Tailwind CSS
+- 🧩 Componentes reutilizables construidos con shadcn/ui
+- 📱 Diseño totalmente responsive
+- ⚡ Carga rápida de páginas con Next.js 14
+- 🔒 Sistema de autenticación
+- 🎭 Animaciones elegantes con Framer Motion
 
-## Tech Stack
+## Stack Tecnológico
 
 - Next.js 14
 - TypeScript
@@ -21,36 +21,36 @@ A modern Next.js website with theme switching and beautiful UI components.
 - Framer Motion
 - Lucide Icons
 
-## Getting Started
+## Inicio Rápido
 
-1. Clone the repository:
+1. Clonar el repositorio:
 \`\`\`bash
 git clone https://github.com/crottolo/persevida_website.git
 \`\`\`
 
-2. Install dependencies:
+2. Instalar dependencias:
 \`\`\`bash
 pnpm install
 \`\`\`
 
-3. Run the development server:
+3. Iniciar el servidor de desarrollo:
 \`\`\`bash
 pnpm dev
 \`\`\`
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abrir [http://localhost:3000](http://localhost:3000) en el navegador para ver el resultado.
 
-## Project Structure
+## Estructura del Proyecto
 
-- `/src/app/*` - App router pages and layouts
-- `/src/components/*` - React components
-- `/src/components/ui/*` - UI components from shadcn/ui
-- `/src/lib/*` - Utility functions and shared code
+- `/src/app/*` - Páginas y layouts del App Router
+- `/src/components/*` - Componentes React
+- `/src/components/ui/*` - Componentes UI de shadcn/ui
+- `/src/lib/*` - Funciones de utilidad y código compartido
 
-## Contributing
+## Contribuir
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Las pull requests son bienvenidas. Para cambios importantes, por favor abra un issue primero para discutir lo que le gustaría cambiar.
 
-## License
+## Licencia
 
 [MIT](https://choosealicense.com/licenses/mit/)

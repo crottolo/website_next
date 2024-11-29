@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
       {
         hostname: 'images.unsplash.com',
       },
+      {
+        hostname: '0.0.0.0',
+      },
+      {
+        hostname: 'narcosvet.it',
+      },
     ],
   },
 };

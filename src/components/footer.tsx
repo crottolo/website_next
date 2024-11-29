@@ -10,13 +10,13 @@ const navigation = {
     { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "#" },
     { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: "Legal", href: "#" },
   ],
   social: [
     {
-      name: "Twitter",
+      name: "LinkedIn",
       href: "#",
-      icon: Twitter,
+      icon: Linkedin,
     },
     {
       name: "GitHub",
@@ -24,9 +24,9 @@ const navigation = {
       icon: Github,
     },
     {
-      name: "LinkedIn",
+      name: "Twitter",
       href: "#",
-      icon: Linkedin,
+      icon: Twitter,
     },
     {
       name: "Instagram",
@@ -44,10 +44,13 @@ export function Footer() {
           {/* Logo and tagline */}
           <div className="flex flex-col items-center mb-8">
             <Link href="/" className="text-2xl font-bold">
-              YourBrand
+              Persevida SL
             </Link>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">
-              Building the future of web development
+              Innovación tecnológica desde Tenerife
+            </p>
+            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400 text-center">
+              Empresa inscrita en la Zona Especial Canaria (ZEC)
             </p>
           </div>
 
@@ -81,10 +84,13 @@ export function Footer() {
             })}
           </div>
 
-          {/* Copyright */}
-          <div className="text-center">
+          {/* Address and Legal */}
+          <div className="text-center space-y-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              &copy; {new Date().getFullYear()} YourBrand. All rights reserved.
+              Santa Cruz de Tenerife, Islas Canarias, España
+            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              &copy; {new Date().getFullYear()} Persevida SL. Todos los derechos reservados.
             </p>
           </div>
         </div>
