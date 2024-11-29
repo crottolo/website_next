@@ -4,6 +4,30 @@ import { HighlightText } from "@/components/ui/highlight-text"
 import Link from "next/link"
 import { ArrowRight, Shield, Download, Mail, Database, Clock, Eye, FileWarning, Lock } from "lucide-react"
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Legal Logger | Monitoraggio e Protezione Log Documentali',
+  description: 'Soluzioni avanzate per il monitoraggio e la protezione dei log documentali. Garantiamo conformità GDPR e massima sicurezza dei dati aziendali.',
+  openGraph: {
+    title: 'Legal Logger | Monitoraggio e Protezione Log Documentali',
+    description: 'Soluzioni avanzate per il monitoraggio e la protezione dei log documentali.',
+    images: [
+      {
+        url: '/home-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Legal Logger - Homepage',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Legal Logger | Monitoraggio e Protezione Log Documentali',
+    description: 'Soluzioni avanzate per il monitoraggio e la protezione dei log documentali.',
+    images: ['/home-hero.jpg'],
+  },
+}
 
 export default function HomePage() {
   const features = [

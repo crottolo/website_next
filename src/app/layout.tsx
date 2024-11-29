@@ -3,13 +3,92 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { AuthProvider } from "@/context/AuthContext"
+import { Metadata, Viewport } from 'next'
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: "Legal Logger",
-  description: "Monitoraggio Log Documentale",
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#000000',
+}
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://www.legallogger.com'),
+  title: {
+    template: '%s | Legal Logger',
+    default: 'Legal Logger | Monitoraggio Log Documentale',
+  },
+  description: 'Legal Logger: soluzione professionale per il monitoraggio e la protezione dei log documentali. Conformità GDPR e sicurezza dei dati garantita.',
+  applicationName: 'Legal Logger',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['legal logger', 'monitoraggio log', 'GDPR', 'sicurezza documentale', 'protezione dati', 'compliance'],
+  authors: [{ name: 'Legal Logger Team' }],
+  creator: 'Legal Logger',
+  publisher: 'Legal Logger',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'it_IT',
+    url: 'https://www.legallogger.com',
+    siteName: 'Legal Logger',
+    title: 'Legal Logger | Monitoraggio Log Documentale',
+    description: 'Legal Logger: soluzione professionale per il monitoraggio e la protezione dei log documentali.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Legal Logger Platform',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Legal Logger | Monitoraggio Log Documentale',
+    description: 'Legal Logger: soluzione professionale per il monitoraggio e la protezione dei log documentali.',
+    images: ['/twitter-image.jpg'],
+    creator: '@legallogger',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://www.legallogger.com',
+    languages: {
+      'it-IT': 'https://www.legallogger.com',
+      'en-US': 'https://www.legallogger.com/en',
+    },
+  },
+  manifest: '/favicon/site.webmanifest',
+  icons: {
+    icon: [
+      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/favicon/safari-pinned-tab.svg', color: '#000000' }
+    ]
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  category: 'technology',
 }
 
 export default function RootLayout({
@@ -19,14 +98,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang='it' suppressHydrationWarning>
-      <head>
-        <link rel='icon' type='image/png' href='/favicon/favicon-96x96.png' sizes='96x96' />
-        <link rel='icon' type='image/svg+xml' href='/favicon/favicon.svg' />
-        <link rel='shortcut icon' href='/favicon/favicon.ico' />
-        <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
-        <meta name='apple-mobile-web-app-title' content='Legal Logger' />
-        <link rel='manifest' href='/favicon/site.webmanifest' />
-      </head>
       <body className={`${inter.className} min-h-screen bg-background antialiased`}>
         <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
           <AuthProvider>
