@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { clearSession } from '@/lib/odooService';
-import { Tabs } from '@/components/ui/tabs';
 
 const Dashboard = () => {
   const { user, error, setUser } = useAuth();

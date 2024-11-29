@@ -31,7 +31,7 @@ export default function AboutPage() {
                 About Our Company
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                We're building the future of web development with modern tools and technologies.
+                We&apos;re building the future of web development with modern tools and technologies.
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function AboutPage() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter">Our Mission</h2>
               <p className="text-gray-500 dark:text-gray-400">
-                We're on a mission to make web development more accessible, efficient, and enjoyable for everyone.
+                We&apos;re on a mission to make web development more accessible, efficient, and enjoyable for everyone.
                 Our platform combines cutting-edge technology with intuitive design to create the best possible
                 experience for developers.
               </p>
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 Join Our Journey
               </h2>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                Be part of something special. Let's build the future together.
+                Let&apos;s build the future together.
               </p>
             </div>
             <div className="space-x-4">

@@ -63,7 +63,7 @@ export default function PricingPage() {
                 Simple, transparent pricing
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                Choose the perfect plan for your needs. Always know what you'll pay.
+                Choose the perfect plan for your needs. Always know what you&apos;ll pay.
               </p>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function PricingPage() {
                 Need something different?
               </h2>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-lg dark:text-gray-400">
-                Contact our sales team for custom pricing options. We're here to help you find the perfect solution.
+                Contact our sales team for custom pricing options. We&apos;re here to help you find the perfect solution.
               </p>
             </div>
             <Button size="lg" variant="outline" className="h-11 px-8">
