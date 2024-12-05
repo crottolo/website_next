@@ -2,34 +2,34 @@
 
 import { Button } from "@/components/ui/button"
 import { FadeInImage } from "@/components/ui/fade-in-image"
-import { Shield, Users, Building, Award } from "lucide-react"
+import { Code, Building, Award, Globe } from "lucide-react"
 import Link from "next/link"
 
 export default function AboutPage() {
   const stats = [
     {
-      icon: Shield,
-      value: "100%",
-      label: "Conformità GDPR",
-      description: "Piena conformità con le normative sulla protezione dei dati"
+      icon: Code,
+      value: "14.0-18.0",
+      label: "Odoo Versions",
+      description: "Full support for all recent Odoo versions"
     },
     {
-      icon: Users,
-      value: "1000+",
-      label: "Clienti Attivi",
-      description: "Aziende che si fidano di noi ogni giorno"
+      icon: Globe,
+      value: "ZEC",
+      label: "Registered",
+      description: "Operating in Canary Islands Special Zone"
     },
     {
       icon: Building,
-      value: "50+",
-      label: "Partner",
-      description: "Network di partner certificati in tutta Italia"
+      value: "100+",
+      label: "Clients",
+      description: "Trusted by businesses worldwide"
     },
     {
       icon: Award,
       value: "10+",
-      label: "Anni di Esperienza",
-      description: "Nel campo della sicurezza informatica e compliance"
+      label: "Years Experience",
+      description: "In software development and Odoo solutions"
     }
   ]
 
@@ -42,11 +42,10 @@ export default function AboutPage() {
             <div className='flex flex-col items-center space-y-4 text-center'>
               <div className='space-y-2'>
                 <h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white'>
-                  Proteggiamo il Futuro Digitale delle Aziende
+                  Empowering Business Growth Through Technology
                 </h1>
                 <p className='mx-auto max-w-[700px] text-gray-400 md:text-xl'>
-                  Dal 2013 aiutiamo le aziende a proteggere i loro dati sensibili con soluzioni
-                  innovative e certificate
+                  Delivering innovative software solutions and Odoo expertise from the Canary Islands to the world
                 </p>
               </div>
             </div>
@@ -79,32 +78,31 @@ export default function AboutPage() {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
               <div className='space-y-4'>
                 <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white'>
-                  La Nostra Missione
+                  Our Mission
                 </h2>
                 <p className='text-gray-400 md:text-xl'>
-                  Crediamo che la sicurezza dei dati sia un diritto fondamentale per ogni azienda.
-                  La nostra missione è rendere la protezione dei dati accessibile, efficace e
-                  conforme alle normative.
+                  We believe that every business deserves access to enterprise-grade software solutions.
+                  Our mission is to make powerful business tools accessible, efficient, and tailored to your needs.
                 </p>
                 <div className='space-y-2'>
                   <p className='text-gray-400'>
-                    • Protezione proattiva contro le minacce informatiche
+                    • Expert Odoo development and customization
                   </p>
-                  <p className='text-gray-400'>• Conformità garantita con le normative vigenti</p>
-                  <p className='text-gray-400'>• Supporto continuo e formazione dedicata</p>
+                  <p className='text-gray-400'>• Cloud-based SAAS solutions</p>
+                  <p className='text-gray-400'>• 24/7 technical support and training</p>
                 </div>
                 <div className='pt-4'>
                   <Link href='/contact'>
                     <Button className='bg-green-600 hover:bg-green-700 text-white'>
-                      Contattaci
+                      Contact Us
                     </Button>
                   </Link>
                 </div>
               </div>
               <div className='relative'>
                 <FadeInImage
-                  src='/LL_visual_col.png'
-                  alt='Legal Logger Team'
+                  src='/images/team.png'
+                  alt='Persevida Team'
                   width={600}
                   height={400}
                   className='rounded-xl shadow-2xl'
@@ -120,21 +118,21 @@ export default function AboutPage() {
             <div className='flex flex-col items-center space-y-4 text-center'>
               <div className='space-y-2'>
                 <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white'>
-                  Pronti a Proteggere i Tuoi Dati?
+                  Ready to Transform Your Business?
                 </h2>
                 <p className='mx-auto max-w-[700px] text-gray-400 md:text-xl'>
-                  Scopri come Legal Logger può aiutare la tua azienda a proteggere i dati sensibili
+                  Discover how Persevida can help your company leverage the power of Odoo and custom software solutions
                 </p>
               </div>
               <div className='space-x-4'>
-                <Link href='/register'>
-                  <Button className='bg-green-600 hover:bg-green-700 text-white'>Inizia Ora</Button>
-                </Link>
                 <Link href='/contact'>
+                  <Button className='bg-green-600 hover:bg-green-700 text-white'>Get Started</Button>
+                </Link>
+                <Link href='/services'>
                   <Button
                     variant='outline'
                     className='border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50'>
-                    Parliamone
+                    Our Services
                   </Button>
                 </Link>
               </div>

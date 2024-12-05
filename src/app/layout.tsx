@@ -15,18 +15,18 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.legallogger.com'),
+  metadataBase: new URL('https://www.persevida.com'),
   title: {
-    template: '%s | Legal Logger',
-    default: 'Legal Logger | Monitoraggio Log Documentale',
+    template: '%s | Persevida SL',
+    default: 'Persevida SL | Software Development & Odoo Solutions',
   },
-  description: 'Legal Logger: soluzione professionale per il monitoraggio e la protezione dei log documentali. Conformità GDPR e sicurezza dei dati garantita.',
-  applicationName: 'Legal Logger',
+  description: 'Persevida SL: Professional software development company specializing in Odoo ERP solutions. ZEC registered company offering SAAS and custom development.',
+  applicationName: 'Persevida',
   referrer: 'origin-when-cross-origin',
-  keywords: ['legal logger', 'monitoraggio log', 'GDPR', 'sicurezza documentale', 'protezione dati', 'compliance'],
-  authors: [{ name: 'Legal Logger Team' }],
-  creator: 'Legal Logger',
-  publisher: 'Legal Logger',
+  keywords: ['persevida', 'odoo partner', 'software development', 'SAAS', 'ZEC', 'canary islands', 'ERP solutions', 'custom development'],
+  authors: [{ name: 'Persevida Team' }],
+  creator: 'Persevida SL',
+  publisher: 'Persevida SL',
   formatDetection: {
     email: false,
     address: false,
@@ -34,26 +34,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'it_IT',
-    url: 'https://www.legallogger.com',
-    siteName: 'Legal Logger',
-    title: 'Legal Logger | Monitoraggio Log Documentale',
-    description: 'Legal Logger: soluzione professionale per il monitoraggio e la protezione dei log documentali.',
+    locale: 'en_US',
+    url: 'https://www.persevida.com',
+    siteName: 'Persevida SL',
+    title: 'Persevida SL | Software Development & Odoo Solutions',
+    description: 'Professional software development company specializing in Odoo ERP solutions. ZEC registered company offering SAAS and custom development.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Legal Logger Platform',
+        alt: 'Persevida SL Platform',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Legal Logger | Monitoraggio Log Documentale',
-    description: 'Legal Logger: soluzione professionale per il monitoraggio e la protezione dei log documentali.',
+    title: 'Persevida SL | Software Development & Odoo Solutions',
+    description: 'Professional software development company specializing in Odoo ERP solutions. ZEC registered company offering SAAS and custom development.',
     images: ['/twitter-image.jpg'],
-    creator: '@legallogger',
+    creator: '@persevida',
   },
   robots: {
     index: true,
@@ -67,10 +67,10 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://www.legallogger.com',
+    canonical: 'https://www.persevida.com',
     languages: {
-      'it-IT': 'https://www.legallogger.com',
-      'en-US': 'https://www.legallogger.com/en',
+      'en-US': 'https://www.persevida.com',
+      'es-ES': 'https://www.persevida.com/es',
     },
   },
   manifest: '/favicon/site.webmanifest',
@@ -97,9 +97,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='it' suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning className="dark">
       <body className={`${inter.className} min-h-screen bg-background antialiased`}>
-        <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+        <ThemeProvider attribute='class' defaultTheme='dark' forcedTheme="dark" enableSystem={false}>
           <AuthProvider>
             <div className='relative flex min-h-screen flex-col'>
               <SiteHeader />

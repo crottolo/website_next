@@ -5,31 +5,31 @@ export function SiteFooter() {
   const currentYear = new Date().getFullYear()
 
   const footerSections = {
-    product: {
-      title: "Prodotto",
+    solutions: {
+      title: "Solutions",
       links: [
-        { href: "/features", label: "Caratteristiche" },
-        { href: "/security", label: "Sicurezza" },
-        { href: "/integrations", label: "Integrazioni" },
-        { href: "/pricing", label: "Prezzi" },
+        { href: "/services", label: "Services" },
+        { href: "/odoo", label: "Odoo Solutions" },
+        { href: "/contact", label: "Get Started" },
+        { href: "/about", label: "About Us" },
       ],
     },
-    resources: {
-      title: "Risorse",
+    technology: {
+      title: "Technology",
       links: [
-        { href: "/docs", label: "Documentazione" },
-        { href: "/api", label: "API" },
-        { href: "/blog", label: "Blog" },
-        { href: "/guides", label: "Guide" },
+        { href: "/services#saas", label: "SAAS" },
+        { href: "/services#cloud", label: "Cloud Solutions" },
+        { href: "/services#custom", label: "Custom Development" },
+        { href: "/services#support", label: "Support" },
       ],
     },
     company: {
-      title: "Azienda",
+      title: "Company",
       links: [
-        { href: "/about", label: "Chi Siamo" },
-        { href: "/contact", label: "Contatti" },
+        { href: "/about", label: "About Us" },
+        { href: "/contact", label: "Contact" },
         { href: "/privacy", label: "Privacy" },
-        { href: "/terms", label: "Termini di Servizio" },
+        { href: "/terms", label: "Terms of Service" },
       ],
     },
   }
@@ -40,22 +40,22 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-4">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">Legal Logger</h3>
+            <h3 className="text-lg font-bold">Persevida SL</h3>
             <p className="text-sm text-muted-foreground">
-              Protezione dei dati con validità legale per la tua azienda
+              Professional software development and Odoo solutions
             </p>
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Via Roma 123, Milano</span>
+                <span>Santa Cruz de Tenerife, Canary Islands</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+39 02 1234567</span>
+                <span>+34 922 123 456</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@legallogger.com</span>
+                <span>info@persevida.com</span>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ export function SiteFooter() {
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center py-6 border-t border-border/40">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Legal Logger. Tutti i diritti riservati.
+            © {currentYear} Persevida SL. All rights reserved.
           </p>
           <div className="flex items-center gap-4 mt-4 sm:mt-0">
             <Link
@@ -96,7 +96,7 @@ export function SiteFooter() {
               href="/terms"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Termini e Condizioni
+              Terms & Conditions
             </Link>
             <Link
               href="/cookies"
@@ -110,13 +110,13 @@ export function SiteFooter() {
         {/* Certifications */}
         <div className="flex justify-center items-center gap-6 py-6 border-t border-border/40">
           <div className="text-sm text-muted-foreground flex items-center gap-2">
-            <span>ISO 27001</span>
+            <span>ZEC Registered Company</span>
           </div>
           <div className="text-sm text-muted-foreground flex items-center gap-2">
-            <span>GDPR Compliant</span>
+            <span>Odoo Partner</span>
           </div>
           <div className="text-sm text-muted-foreground flex items-center gap-2">
-            <span>SOC 2 Type II</span>
+            <span>ISO 9001</span>
           </div>
         </div>
       </div>

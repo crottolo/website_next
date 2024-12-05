@@ -2,29 +2,29 @@ import { Button } from "@/components/ui/button"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
 import { HighlightText } from "@/components/ui/highlight-text"
 import Link from "next/link"
-import { ArrowRight, Shield, Download, Mail, Database, Clock, Eye, FileWarning, Lock } from "lucide-react"
+import { ArrowRight, Code, Cloud, Database, Cog, Users, Rocket, Server, Laptop } from "lucide-react"
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards"
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Legal Logger | Monitoraggio e Protezione Log Documentali',
-  description: 'Soluzioni avanzate per il monitoraggio e la protezione dei log documentali. Garantiamo conformità GDPR e massima sicurezza dei dati aziendali.',
+  title: 'Persevida SL | Software Development & Odoo Solutions',
+  description: 'Professional software development company specializing in Odoo ERP solutions. ZEC registered company offering SAAS and custom development.',
   openGraph: {
-    title: 'Legal Logger | Monitoraggio e Protezione Log Documentali',
-    description: 'Soluzioni avanzate per il monitoraggio e la protezione dei log documentali.',
+    title: 'Persevida SL | Software Development & Odoo Solutions',
+    description: 'Professional software development company specializing in Odoo ERP solutions.',
     images: [
       {
         url: '/home-hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Legal Logger - Homepage',
+        alt: 'Persevida SL - Homepage',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Legal Logger | Monitoraggio e Protezione Log Documentali',
-    description: 'Soluzioni avanzate per il monitoraggio e la protezione dei log documentali.',
+    title: 'Persevida SL | Software Development & Odoo Solutions',
+    description: 'Professional software development company specializing in Odoo ERP solutions.',
     images: ['/home-hero.jpg'],
   },
 }
@@ -32,89 +32,89 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const features = [
     {
-      title: "Monitoraggio Attività",
-      description: "Tracciamento in tempo reale di ogni interazione con i dati aziendali",
-      icon: Eye,
-      highlight: "Real-time tracking"
+      title: "Odoo Development",
+      description: "Custom modules and implementations for Odoo 14.0 to 18.0",
+      icon: Code,
+      highlight: "Expert Partner"
     },
     {
-      title: "Log Certificati",
-      description: "Marca temporale certificata per ogni evento registrato",
-      icon: Clock,
-      highlight: "Validità legale"
+      title: "SAAS Solutions",
+      description: "Cloud-based software solutions with high availability",
+      icon: Cloud,
+      highlight: "Enterprise Ready"
     },
     {
-      title: "Protezione Dati",
-      description: "Prevenzione delle fughe di dati e accessi non autorizzati",
-      icon: Shield,
-      highlight: "Data protection"
+      title: "Custom Development",
+      description: "Tailored software solutions for your business needs",
+      icon: Cog,
+      highlight: "Bespoke Solutions"
     }
   ]
 
   const useCases = [
     {
-      title: "Download Massivi",
-      description: "Identificazione immediata di download anomali di documenti aziendali",
-      icon: Download,
-      stats: "Riduzione del 95% delle fughe di dati"
-    },
-    {
-      title: "Comunicazioni Sospette",
-      description: "Monitoraggio delle comunicazioni verso destinatari esterni non autorizzati",
-      icon: Mail,
-      stats: "100% tracciabilità garantita"
-    },
-    {
-      title: "Accessi al Database",
-      description: "Controllo delle query e delle estrazioni massive dal database",
+      title: "ERP Implementation",
+      description: "Full-scale Odoo ERP implementation and customization",
       icon: Database,
-      stats: "Prevenzione accessi non autorizzati"
+      stats: "100+ successful implementations"
+    },
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration of your systems to cloud infrastructure",
+      icon: Server,
+      stats: "99.9% uptime guaranteed"
+    },
+    {
+      title: "Business Integration",
+      description: "Connect your systems with custom API development",
+      icon: Laptop,
+      stats: "50+ integrations delivered"
     }
   ]
 
   const benefits = [
     {
-      title: "Conformità GDPR",
-      description: "Rispetto completo delle normative sulla protezione dei dati",
-      icon: Lock
+      title: "ZEC Advantages",
+      description: "Benefit from Canary Islands Special Zone tax incentives",
+      icon: Rocket
     },
     {
-      title: "Report Forensi",
-      description: "Generazione di report dettagliati per analisi legali",
-      icon: FileWarning
+      title: "Expert Team",
+      description: "Skilled developers with years of Odoo experience",
+      icon: Users
     },
     {
-      title: "Alert in Tempo Reale",
-      description: "Notifiche immediate per attività sospette",
-      icon: Clock
+      title: "24/7 Support",
+      description: "Round-the-clock technical support for your systems",
+      icon: Cloud
     }
   ]
 
   const testimonials = [
     {
-      quote: "L&apos;integrazione con i nostri sistemi esistenti è stata sorprendentemente semplice. In pochi giorni avevamo una visibilità completa su tutte le attività critiche.",
-      name: "Marco Rossi",
-      title: "CTO, TechCorp Italia"
+      quote: "Persevida's Odoo expertise helped us streamline our entire business operations. Their custom modules perfectly fit our needs.",
+      name: "John Smith",
+      title: "CTO, TechCorp Spain"
     },
     {
-      quote: "Legal Logger ci ha permesso di identificare e bloccare una fuga di dati sensibili prima che causasse danni irreparabili. Il sistema di alert in tempo reale è incredibilmente efficace.",
-      name: "Laura Bianchi",
-      title: "Legal Director, FinanceGroup"
+      quote: "The cloud migration was seamless, and their support team is always there when we need them. Excellent service!",
+      name: "Maria Garcia",
+      title: "Operations Director, LogisticsPro"
     },
     {
-      quote: "Grazie a Legal Logger abbiamo potuto dimostrare la nostra compliance GDPR in modo inequivocabile durante un audit. La documentazione automatica è impeccabile.",
-      name: "Giuseppe Verdi",
-      title: "Data Protection Officer, Healthcare Solutions"
+      quote: "Their understanding of business processes and technical expertise made our ERP implementation a success.",
+      name: "David Wilson",
+      title: "CEO, Manufacturing Solutions"
     },
     {
-      quote: "Il monitoraggio delle attività sospette ha rivelato pattern di comportamento che non avremmo mai individuato manualmente. Un vero game changer per la sicurezza.",
-      name: "Anna Neri",
-      title: "Security Manager, Industrial Tech"
+      quote: "The SAAS solution they developed has transformed how we handle our customer relationships. Highly recommended!",
+      name: "Ana Rodriguez",
+      title: "Sales Manager, RetailTech"
     },
     {
-      quote: "Il supporto del team di Legal Logger è eccezionale. Hanno compreso immediatamente le nostre esigenze e ci hanno guidato nell'implementazione ottimale.",
-      name: "Sofia Marroni",
-      title: "COO, Digital Services"
+      quote: "Working with Persevida has been a game-changer for our business. Their technical support is outstanding.",
+      name: "Michael Brown",
+      title: "IT Director, Global Services"
     }
   ];
 
@@ -126,25 +126,25 @@ export default function HomePage() {
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4 max-w-4xl mx-auto">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-white">
-                  Proteggi i tuoi <HighlightText>dati sensibili</HighlightText> con prove legali
+                  Transform Your Business with <HighlightText>Odoo Solutions</HighlightText>
                 </h1>
                 <p className="mx-auto max-w-3xl text-gray-400 md:text-xl">
-                  Monitora e proteggi la tua azienda con prove legali certificate di ogni evento
+                  Expert Odoo development and custom software solutions for your growing business
                 </p>
               </div>
               <div className="flex items-center justify-center gap-4">
-                <Link href="/register">
+                <Link href="/contact">
                   <Button className="bg-green-600 hover:bg-green-700 text-white">
-                    Inizia Ora
+                    Get Started
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <Link href="/about">
+                <Link href="/services">
                   <Button 
                     variant="outline" 
                     className="border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50"
                   >
-                    Scopri di più
+                    Our Services
                   </Button>
                 </Link>
               </div>
@@ -156,10 +156,10 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Caratteristiche Principali
+                Core Services
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Tecnologia avanzata per la protezione dei tuoi dati aziendali
+                Advanced technology solutions for your business growth
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -183,10 +183,10 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-2xl font-bold mb-8">
-                Casi d&apos;Uso
+                Solutions
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Scopri come Legal Logger protegge la tua azienda
+                Discover how Persevida can transform your business
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -210,10 +210,10 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Vantaggi
+                Why Choose Us
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Perché scegliere Legal Logger
+                The Persevida advantage
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -234,10 +234,10 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Le Aziende che si Fidano di Noi
+                Companies That Trust Us
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Scopri come Legal Logger sta aiutando le aziende a proteggere i loro dati sensibili
+                See how Persevida is helping businesses grow with custom solutions
               </p>
             </div>
           </div>
@@ -247,33 +247,6 @@ export default function HomePage() {
               direction="right"
               speed="slow"
             />
-          </div>
-        </section>
-
-        <section className="w-full py-20 bg-black">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">
-              Pronto a Proteggere i Tuoi Dati?
-            </h2>
-            <p className="text-gray-400 mb-8">
-              L&apos;innovativa soluzione per la sicurezza dei dati aziendali
-            </p>
-            <div className="mt-8 flex justify-center gap-4">
-              <Link href="/register">
-                <Button className="bg-green-600 hover:bg-green-700 text-white">
-                  Prova Gratuita
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button 
-                  variant="outline" 
-                  className="border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50"
-                >
-                  Contattaci
-                </Button>
-              </Link>
-            </div>
           </div>
         </section>
       </main>

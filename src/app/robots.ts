@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = 'https://www.persevida.com'
+  
   return {
     rules: {
       userAgent: '*',
@@ -11,8 +13,11 @@ export default function robots(): MetadataRoute.Robots {
         '/api/',
         '/_next/',
         '/private/',
+        '/login/',
+        '/register/',
       ],
     },
-    sitemap: 'https://www.legallogger.it/sitemap.xml',
+    sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
   }
 } 
