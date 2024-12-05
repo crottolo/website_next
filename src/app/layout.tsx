@@ -98,8 +98,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' suppressHydrationWarning className="dark">
-      <body className={`${inter.className} min-h-screen bg-background antialiased`}>
-        <ThemeProvider attribute='class' defaultTheme='dark' forcedTheme="dark" enableSystem={false}>
+      <body className={`${inter.className} min-h-screen bg-background antialiased dark`}>
+        <ThemeProvider attribute='class' defaultTheme='dark' enableSystem={false}>
           <AuthProvider>
             <div className='relative flex min-h-screen flex-col'>
               <SiteHeader />
