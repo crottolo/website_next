@@ -1,35 +1,37 @@
-import Link from "next/link"
+import { Link } from '@/i18n/routing'
+import { useTranslations } from 'next-intl';
 import { Mail, MapPin, Phone } from "lucide-react"
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear()
+  const t = useTranslations('Footer');
 
   const footerSections = {
     solutions: {
-      title: "Solutions",
+      title: t('sections.solutions.title'),
       links: [
-        { href: "/services", label: "Services" },
-        { href: "/odoo", label: "Odoo Solutions" },
-        { href: "/contact", label: "Get Started" },
-        { href: "/about", label: "About Us" },
+        { href: "/services", label: t('sections.solutions.links.services') },
+        { href: "/odoo", label: t('sections.solutions.links.odoo') },
+        { href: "/contact", label: t('sections.solutions.links.getStarted') },
+        { href: "/about", label: t('sections.solutions.links.about') },
       ],
     },
     technology: {
-      title: "Technology",
+      title: t('sections.technology.title'),
       links: [
-        { href: "/services#saas", label: "SAAS" },
-        { href: "/services#cloud", label: "Cloud Solutions" },
-        { href: "/services#custom", label: "Custom Development" },
-        { href: "/services#support", label: "Support" },
+        { href: "/services#saas", label: t('sections.technology.links.saas') },
+        { href: "/services#cloud", label: t('sections.technology.links.cloud') },
+        { href: "/services#custom", label: t('sections.technology.links.custom') },
+        { href: "/services#support", label: t('sections.technology.links.support') },
       ],
     },
     company: {
-      title: "Company",
+      title: t('sections.company.title'),
       links: [
-        { href: "/about", label: "About Us" },
-        { href: "/contact", label: "Contact" },
-        { href: "/privacy", label: "Privacy" },
-        { href: "/terms", label: "Terms of Service" },
+        { href: "/about", label: t('sections.company.links.about') },
+        { href: "/contact", label: t('sections.company.links.contact') },
+        { href: "/privacy", label: t('sections.company.links.privacy') },
+        { href: "/terms", label: t('sections.company.links.terms') },
       ],
     },
   }
@@ -40,22 +42,22 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-4">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">Persevida SL</h3>
+            <h3 className="text-lg font-bold">{t('company.name')}</h3>
             <p className="text-sm text-muted-foreground">
-              Professional software development and Odoo solutions
+              {t('company.description')}
             </p>
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Santa Cruz de Tenerife, Canary Islands</span>
+                <span>{t('company.address')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+34 922 123 456</span>
+                <span>{t('company.phone')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@persevida.com</span>
+                <span>{t('company.email')}</span>
               </div>
             </div>
           </div>
@@ -83,26 +85,26 @@ export function SiteFooter() {
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center py-6 border-t border-border/40">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Persevida SL. All rights reserved.
+            © {currentYear} {t('legal.copyright')}
           </p>
           <div className="flex items-center gap-4 mt-4 sm:mt-0">
             <Link
               href="/privacy"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Privacy Policy
+              {t('legal.privacy')}
             </Link>
             <Link
               href="/terms"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Terms & Conditions
+              {t('legal.terms')}
             </Link>
             <Link
               href="/cookies"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Cookie Policy
+              {t('legal.cookies')}
             </Link>
           </div>
         </div>
@@ -110,13 +112,13 @@ export function SiteFooter() {
         {/* Certifications */}
         <div className="flex justify-center items-center gap-6 py-6 border-t border-border/40">
           <div className="text-sm text-muted-foreground flex items-center gap-2">
-            <span>ZEC Registered Company</span>
+            <span>{t('certifications.zec')}</span>
           </div>
           <div className="text-sm text-muted-foreground flex items-center gap-2">
-            <span>Odoo Partner</span>
+            <span>{t('certifications.odoo')}</span>
           </div>
           <div className="text-sm text-muted-foreground flex items-center gap-2">
-            <span>ISO 9001</span>
+            <span>{t('certifications.iso')}</span>
           </div>
         </div>
       </div>

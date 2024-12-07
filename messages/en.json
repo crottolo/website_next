@@ -1,0 +1,539 @@
+{
+  "Navigation": {
+    "menu": {
+      "services": "Services",
+      "odoo": "Odoo",
+      "about": "About",
+      "title": "Navigation Menu",
+      "toggle": "Toggle menu"
+    },
+    "logo": {
+      "alt": "Persevida Logo"
+    },
+    "account": {
+      "title": "My Account",
+      "dashboard": "Dashboard",
+      "logout": "Logout"
+    },
+    "auth": {
+      "login": "Login"
+    },
+    "cta": {
+      "contact": "Contact Us"
+    },
+    "language": {
+      "title": "Select Language",
+      "select": "Change language"
+    }
+  },
+  "Footer": {
+    "company": {
+      "name": "Persevida SL",
+      "description": "Professional software development and Odoo solutions",
+      "address": "Santa Cruz de Tenerife, Canary Islands",
+      "phone": "+34 922 123 456",
+      "email": "info@persevida.com"
+    },
+    "sections": {
+      "solutions": {
+        "title": "Solutions",
+        "links": {
+          "services": "Services",
+          "odoo": "Odoo Solutions",
+          "getStarted": "Get Started",
+          "about": "About Us"
+        }
+      },
+      "technology": {
+        "title": "Technology",
+        "links": {
+          "saas": "SAAS",
+          "cloud": "Cloud Solutions",
+          "custom": "Custom Development",
+          "support": "Support"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About Us",
+          "contact": "Contact",
+          "privacy": "Privacy",
+          "terms": "Terms of Service"
+        }
+      }
+    },
+    "legal": {
+      "copyright": "Persevida SL. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "cookies": "Cookie Policy"
+    },
+    "certifications": {
+      "zec": "ZEC Registered Company",
+      "odoo": "Odoo Partner",
+      "iso": "ISO 9001"
+    },
+    "simple": {
+      "navigation": {
+        "about": "About",
+        "features": "Features",
+        "pricing": "Pricing",
+        "contact": "Contact",
+        "privacy": "Privacy",
+        "legal": "Legal"
+      },
+      "company": {
+        "name": "Persevida SL",
+        "tagline": "Technological innovation from Tenerife",
+        "zec": "Company registered in the Canary Islands Special Zone (ZEC)",
+        "address": "Santa Cruz de Tenerife, Canary Islands, Spain"
+      },
+      "legal": {
+        "copyright": "Persevida SL. All rights reserved."
+      }
+    }
+  },
+  "Auth": {
+    "login": {
+      "title": "Login",
+      "description": "Enter your credentials to access your account",
+      "form": {
+        "username": {
+          "label": "Username",
+          "placeholder": "Enter your username"
+        },
+        "password": {
+          "label": "Password"
+        },
+        "forgotPassword": "Forgot your password?",
+        "submit": {
+          "default": "Login",
+          "loading": "Logging in..."
+        },
+        "register": "Register",
+        "googleLogin": "Login with Google",
+        "noAccount": "Don't have an account?",
+        "signUp": "Sign up"
+      },
+      "errors": {
+        "invalid": "Invalid credentials",
+        "generic": "An error occurred"
+      }
+    },
+    "register": {
+      "title": "Create an Account",
+      "description": "Enter your details to create an account",
+      "form": {
+        "firstName": {
+          "label": "First Name",
+          "placeholder": "John"
+        },
+        "lastName": {
+          "label": "Last Name",
+          "placeholder": "Doe"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "john.doe@example.com"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "+34 922 000 000"
+        },
+        "password": {
+          "label": "Password",
+          "hint": "Password must be at least 8 characters long"
+        },
+        "confirmPassword": {
+          "label": "Confirm Password"
+        },
+        "submit": {
+          "default": "Register",
+          "loading": "Registering..."
+        },
+        "hasAccount": "Already have an account? Login"
+      },
+      "errors": {
+        "generic": "An error occurred"
+      }
+    }
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Transform Your Business with",
+      "highlight": "Odoo Solutions",
+      "subtitle": "Expert Odoo development and custom software solutions for your growing business",
+      "cta": {
+        "primary": "Get Started",
+        "secondary": "Our Services"
+      }
+    },
+    "services": {
+      "title": "Core Services",
+      "subtitle": "Advanced technology solutions for your business growth"
+    },
+    "features": {
+      "odoo": {
+        "title": "Odoo Development",
+        "description": "Custom modules and implementations for Odoo 14.0 to 18.0",
+        "highlight": "Expert Partner"
+      },
+      "saas": {
+        "title": "SAAS Solutions",
+        "description": "Cloud-based software solutions with high availability",
+        "highlight": "Enterprise Ready"
+      },
+      "custom": {
+        "title": "Custom Development",
+        "description": "Tailored software solutions for your business needs",
+        "highlight": "Bespoke Solutions"
+      }
+    },
+    "solutions": {
+      "title": "Solutions",
+      "subtitle": "Discover how Persevida can transform your business"
+    },
+    "useCases": {
+      "erp": {
+        "title": "ERP Implementation",
+        "description": "Full-scale Odoo ERP implementation and customization",
+        "stats": "100+ successful implementations"
+      },
+      "cloud": {
+        "title": "Cloud Migration",
+        "description": "Seamless migration of your systems to cloud infrastructure",
+        "stats": "99.9% uptime guaranteed"
+      },
+      "integration": {
+        "title": "Business Integration",
+        "description": "Connect your systems with custom API development",
+        "stats": "50+ integrations delivered"
+      }
+    },
+    "whyUs": {
+      "title": "Why Choose Us",
+      "subtitle": "The Persevida advantage"
+    },
+    "benefits": {
+      "zec": {
+        "title": "ZEC Advantages",
+        "description": "Benefit from Canary Islands Special Zone tax incentives"
+      },
+      "team": {
+        "title": "Expert Team",
+        "description": "Skilled developers with years of Odoo experience"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Round-the-clock technical support for your systems"
+      }
+    },
+    "testimonials": {
+      "title": "Companies That Trust Us",
+      "subtitle": "See how Persevida is helping businesses grow with custom solutions",
+      "1": {
+        "quote": "Persevida's Odoo expertise helped us streamline our entire business operations. Their custom modules perfectly fit our needs.",
+        "name": "John Smith",
+        "title": "CTO, TechCorp Spain"
+      },
+      "2": {
+        "quote": "The cloud migration was seamless, and their support team is always there when we need them. Excellent service!",
+        "name": "Maria Garcia",
+        "title": "Operations Director, LogisticsPro"
+      },
+      "3": {
+        "quote": "Their understanding of business processes and technical expertise made our ERP implementation a success.",
+        "name": "David Wilson",
+        "title": "CEO, Manufacturing Solutions"
+      },
+      "4": {
+        "quote": "The SAAS solution they developed has transformed how we handle our customer relationships. Highly recommended!",
+        "name": "Ana Rodriguez",
+        "title": "Sales Manager, RetailTech"
+      },
+      "5": {
+        "quote": "Working with Persevida has been a game-changer for our business. Their technical support is outstanding.",
+        "name": "Michael Brown",
+        "title": "IT Director, Global Services"
+      }
+    }
+  },
+  "AboutPage": {
+    "hero": {
+      "title": "Empowering Business Growth Through Technology",
+      "subtitle": "Delivering innovative software solutions and Odoo expertise from the Canary Islands to the world"
+    },
+    "stats": {
+      "odoo": {
+        "value": "14.0-18.0",
+        "label": "Odoo Versions",
+        "description": "Full support for all recent Odoo versions"
+      },
+      "zec": {
+        "value": "ZEC",
+        "label": "Registered",
+        "description": "Operating in Canary Islands Special Zone"
+      },
+      "clients": {
+        "value": "100+",
+        "label": "Clients",
+        "description": "Trusted by businesses worldwide"
+      },
+      "experience": {
+        "value": "10+",
+        "label": "Years Experience",
+        "description": "In software development and Odoo solutions"
+      }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "We believe that every business deserves access to enterprise-grade software solutions. Our mission is to make powerful business tools accessible, efficient, and tailored to your needs.",
+      "points": {
+        "odoo": "• Expert Odoo development and customization",
+        "saas": "• Cloud-based SAAS solutions",
+        "support": "• 24/7 technical support and training"
+      },
+      "cta": "Contact Us",
+      "image": {
+        "alt": "Persevida Team"
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "description": "Discover how Persevida can help your company leverage the power of Odoo and custom software solutions",
+      "primary": "Get Started",
+      "secondary": "Our Services"
+    }
+  },
+  "metadata": {
+    "titleTemplate": "%s | Persevida SL",
+    "defaultTitle": "Persevida SL | Software Development & Odoo Solutions",
+    "description": "Persevida SL: Professional software development company specializing in Odoo ERP solutions. ZEC registered company offering SAAS and custom development.",
+    "applicationName": "Persevida",
+    "keywords": ["persevida", "odoo partner", "software development", "SAAS", "ZEC", "canary islands", "ERP solutions", "custom development"],
+    "authorName": "Persevida Team",
+    "creator": "Persevida SL",
+    "publisher": "Persevida SL",
+    "locale": "en_US",
+    "url": "https://www.persevida.com",
+    "siteName": "Persevida SL",
+    "ogTitle": "Persevida SL | Software Development & Odoo Solutions",
+    "ogDescription": "Professional software development company specializing in Odoo ERP solutions. ZEC registered company offering SAAS and custom development.",
+    "ogImage": "/og-image.jpg",
+    "ogImageAlt": "Persevida SL Platform",
+    "twitterTitle": "Persevida SL | Software Development & Odoo Solutions",
+    "twitterDescription": "Professional software development company specializing in Odoo ERP solutions. ZEC registered company offering SAAS and custom development.",
+    "twitterImage": "/twitter-image.jpg",
+    "twitterCreator": "@persevida",
+    "canonicalUrl": "https://www.persevida.com",
+    "googleVerification": "your-google-verification-code"
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "action": "Back to Home"
+  },
+  "OdooPage": {
+    "hero": {
+      "title": "Odoo Solutions",
+      "subtitle": "Expert Odoo development and implementation services for all versions"
+    },
+    "versions": {
+      "title": "Supported Versions",
+      "items": {
+        "18": {
+          "status": "Early Access Partner",
+          "features": "Latest innovations and improvements"
+        },
+        "17": {
+          "status": "Full Support",
+          "features": "Current stable version with all features"
+        },
+        "16": {
+          "status": "Enterprise Ready",
+          "features": "Proven stability and performance"
+        },
+        "14-15": {
+          "status": "Legacy Support",
+          "features": "Maintenance and upgrades"
+        }
+      }
+    },
+    "services": {
+      "title": "Our Odoo Services",
+      "implementation": {
+        "title": "Implementation",
+        "description": "Full-scale Odoo implementation tailored to your business needs",
+        "features": {
+          "analysis": "Business process analysis",
+          "configuration": "Module selection and configuration",
+          "migration": "Data migration",
+          "training": "User training and support"
+        }
+      },
+      "development": {
+        "title": "Development",
+        "description": "Custom module development and system integration",
+        "features": {
+          "modules": "Custom module creation",
+          "api": "API integration",
+          "integration": "Third-party system connection",
+          "optimization": "Performance optimization"
+        }
+      },
+      "support": {
+        "title": "Support",
+        "description": "Comprehensive technical support and maintenance",
+        "features": {
+          "assistance": "24/7 technical assistance",
+          "bugfix": "Bug fixing",
+          "monitoring": "Performance monitoring",
+          "updates": "Regular updates"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Upgrade Your Business?",
+      "subtitle": "Let us help you implement or optimize your Odoo ERP system",
+      "buttons": {
+        "start": "Get Started",
+        "cases": "View Success Stories"
+      }
+    }
+  },
+  "ServicesPage": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive software solutions to drive your business forward"
+    },
+    "mainServices": {
+      "odoo": {
+        "title": "Odoo Development",
+        "description": "Custom Odoo modules and implementations tailored to your business needs. Supporting versions 14.0 through 18.0.",
+        "features": {
+          "modules": "Custom module development",
+          "upgrades": "Version upgrades and migrations",
+          "integration": "Integration with third-party systems",
+          "optimization": "Performance optimization"
+        }
+      },
+      "saas": {
+        "title": "SAAS Solutions",
+        "description": "Cloud-based software solutions with high availability and scalability for your growing business.",
+        "features": {
+          "hosting": "Managed cloud hosting",
+          "backups": "Automatic backups",
+          "availability": "High availability setup",
+          "security": "Security monitoring"
+        }
+      },
+      "erp": {
+        "title": "ERP Implementation",
+        "description": "Full-scale Odoo ERP implementation and customization services for businesses of all sizes.",
+        "features": {
+          "analysis": "Business process analysis",
+          "migration": "Data migration",
+          "training": "User training",
+          "support": "Post-implementation support"
+        }
+      },
+      "custom": {
+        "title": "Custom Development",
+        "description": "Bespoke software solutions designed and developed to address your specific business challenges.",
+        "features": {
+          "web": "Web applications",
+          "api": "API development",
+          "integration": "System integration",
+          "modernization": "Legacy system modernization"
+        }
+      }
+    },
+    "additional": {
+      "title": "Additional Services",
+      "support": {
+        "title": "Technical Support",
+        "description": "24/7 technical support for all your Odoo and custom software needs"
+      },
+      "cloud": {
+        "title": "Cloud Migration",
+        "description": "Seamless migration of your existing systems to cloud infrastructure"
+      },
+      "zec": {
+        "title": "ZEC Benefits",
+        "description": "Take advantage of Canary Islands Special Zone tax incentives"
+      },
+      "integration": {
+        "title": "System Integration",
+        "description": "Connect your business systems for improved efficiency"
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Contact us to discuss how we can help transform your business with our software solutions",
+      "buttons": {
+        "contact": "Contact Us",
+        "cases": "View Case Studies"
+      }
+    }
+  },
+  "Metadata": {
+    "login": {
+      "title": "Login - Persevida",
+      "description": "Access your account to manage your Odoo services"
+    },
+    "register": {
+      "title": "Register - Persevida",
+      "description": "Create your account to access Odoo services"
+    }
+  },
+  "Dashboard": {
+    "error": {
+      "title": "Connection Error",
+      "subtitle": "Unable to connect to Odoo server. Please check your connection and try again.",
+      "errorPrefix": "Error:",
+      "returnToLogin": "Return to Login"
+    },
+    "cards": {
+      "userInfo": {
+        "title": "User Information",
+        "username": "Username",
+        "userId": "User ID",
+        "partnerId": "Partner ID"
+      },
+      "companyInfo": {
+        "title": "Company Information",
+        "currentCompany": "Current Company",
+        "companyId": "Company ID",
+        "multiCompany": "Multi-Company",
+        "enabled": "Enabled",
+        "disabled": "Disabled"
+      },
+      "systemInfo": {
+        "title": "System Information",
+        "database": "Database",
+        "serverVersion": "Server Version",
+        "baseUrl": "Base URL"
+      },
+      "localization": {
+        "title": "Localization Settings",
+        "language": "Language",
+        "timezone": "Timezone",
+        "currency": "Currency"
+      },
+      "systemLimits": {
+        "title": "System Limits",
+        "maxFileSize": "Max File Upload Size",
+        "activeIdsLimit": "Active IDs Limit",
+        "maxTimeKeys": "Max Time Between Keys"
+      },
+      "permissions": {
+        "title": "Permissions",
+        "systemUser": "System User",
+        "administrator": "Administrator",
+        "yes": "Yes",
+        "no": "No"
+      }
+    }
+  }
+}

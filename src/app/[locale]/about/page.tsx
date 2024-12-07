@@ -1,35 +1,38 @@
 "use client";
 
+import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button"
 import { FadeInImage } from "@/components/ui/fade-in-image"
 import { Code, Building, Award, Globe } from "lucide-react"
-import Link from "next/link"
+import { Link } from '@/i18n/routing';
 
 export default function AboutPage() {
+  const t = useTranslations('AboutPage');
+
   const stats = [
     {
       icon: Code,
-      value: "14.0-18.0",
-      label: "Odoo Versions",
-      description: "Full support for all recent Odoo versions"
+      value: t('stats.odoo.value'),
+      label: t('stats.odoo.label'),
+      description: t('stats.odoo.description')
     },
     {
       icon: Globe,
-      value: "ZEC",
-      label: "Registered",
-      description: "Operating in Canary Islands Special Zone"
+      value: t('stats.zec.value'),
+      label: t('stats.zec.label'),
+      description: t('stats.zec.description')
     },
     {
       icon: Building,
-      value: "100+",
-      label: "Clients",
-      description: "Trusted by businesses worldwide"
+      value: t('stats.clients.value'),
+      label: t('stats.clients.label'),
+      description: t('stats.clients.description')
     },
     {
       icon: Award,
-      value: "10+",
-      label: "Years Experience",
-      description: "In software development and Odoo solutions"
+      value: t('stats.experience.value'),
+      label: t('stats.experience.label'),
+      description: t('stats.experience.description')
     }
   ]
 
@@ -42,10 +45,10 @@ export default function AboutPage() {
             <div className='flex flex-col items-center space-y-4 text-center'>
               <div className='space-y-2'>
                 <h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white'>
-                  Empowering Business Growth Through Technology
+                  {t('hero.title')}
                 </h1>
                 <p className='mx-auto max-w-[700px] text-gray-400 md:text-xl'>
-                  Delivering innovative software solutions and Odoo expertise from the Canary Islands to the world
+                  {t('hero.subtitle')}
                 </p>
               </div>
             </div>
@@ -78,23 +81,22 @@ export default function AboutPage() {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
               <div className='space-y-4'>
                 <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white'>
-                  Our Mission
+                  {t('mission.title')}
                 </h2>
                 <p className='text-gray-400 md:text-xl'>
-                  We believe that every business deserves access to enterprise-grade software solutions.
-                  Our mission is to make powerful business tools accessible, efficient, and tailored to your needs.
+                  {t('mission.description')}
                 </p>
                 <div className='space-y-2'>
                   <p className='text-gray-400'>
-                    • Expert Odoo development and customization
+                    {t('mission.points.odoo')}
                   </p>
-                  <p className='text-gray-400'>• Cloud-based SAAS solutions</p>
-                  <p className='text-gray-400'>• 24/7 technical support and training</p>
+                  <p className='text-gray-400'>{t('mission.points.saas')}</p>
+                  <p className='text-gray-400'>{t('mission.points.support')}</p>
                 </div>
                 <div className='pt-4'>
                   <Link href='/contact'>
                     <Button className='bg-green-600 hover:bg-green-700 text-white'>
-                      Contact Us
+                      {t('mission.cta')}
                     </Button>
                   </Link>
                 </div>
@@ -102,7 +104,7 @@ export default function AboutPage() {
               <div className='relative'>
                 <FadeInImage
                   src='/images/team.png'
-                  alt='Persevida Team'
+                  alt={t('mission.image.alt')}
                   width={600}
                   height={400}
                   className='rounded-xl shadow-2xl'
@@ -118,21 +120,23 @@ export default function AboutPage() {
             <div className='flex flex-col items-center space-y-4 text-center'>
               <div className='space-y-2'>
                 <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white'>
-                  Ready to Transform Your Business?
+                  {t('cta.title')}
                 </h2>
                 <p className='mx-auto max-w-[700px] text-gray-400 md:text-xl'>
-                  Discover how Persevida can help your company leverage the power of Odoo and custom software solutions
+                  {t('cta.description')}
                 </p>
               </div>
               <div className='space-x-4'>
                 <Link href='/contact'>
-                  <Button className='bg-green-600 hover:bg-green-700 text-white'>Get Started</Button>
+                  <Button className='bg-green-600 hover:bg-green-700 text-white'>
+                    {t('cta.primary')}
+                  </Button>
                 </Link>
                 <Link href='/services'>
                   <Button
                     variant='outline'
                     className='border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50'>
-                    Our Services
+                    {t('cta.secondary')}
                   </Button>
                 </Link>
               </div>

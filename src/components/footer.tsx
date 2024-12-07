@@ -1,42 +1,45 @@
 "use client"
 
-import Link from "next/link"
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing'
 import { Github, Twitter, Linkedin, Instagram } from "lucide-react"
 
-const navigation = {
-  main: [
-    { name: "About", href: "/about" },
-    { name: "Features", href: "/features" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Contact", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Legal", href: "#" },
-  ],
-  social: [
-    {
-      name: "LinkedIn",
-      href: "#",
-      icon: Linkedin,
-    },
-    {
-      name: "GitHub",
-      href: "#",
-      icon: Github,
-    },
-    {
-      name: "Twitter",
-      href: "#",
-      icon: Twitter,
-    },
-    {
-      name: "Instagram",
-      href: "#",
-      icon: Instagram,
-    },
-  ],
-}
-
 export function Footer() {
+  const t = useTranslations('Footer.simple');
+
+  const navigation = {
+    main: [
+      { name: t('navigation.about'), href: "/about" },
+      { name: t('navigation.features'), href: "/features" },
+      { name: t('navigation.pricing'), href: "/pricing" },
+      { name: t('navigation.contact'), href: "#" },
+      { name: t('navigation.privacy'), href: "#" },
+      { name: t('navigation.legal'), href: "#" },
+    ],
+    social: [
+      {
+        name: "LinkedIn",
+        href: "#",
+        icon: Linkedin,
+      },
+      {
+        name: "GitHub",
+        href: "#",
+        icon: Github,
+      },
+      {
+        name: "Twitter",
+        href: "#",
+        icon: Twitter,
+      },
+      {
+        name: "Instagram",
+        href: "#",
+        icon: Instagram,
+      },
+    ],
+  }
+
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,13 +47,13 @@ export function Footer() {
           {/* Logo and tagline */}
           <div className="flex flex-col items-center mb-8">
             <Link href="/" className="text-2xl font-bold">
-              Persevida SL
+              {t('company.name')}
             </Link>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">
-              Innovación tecnológica desde Tenerife
+              {t('company.tagline')}
             </p>
             <p className="mt-1 text-xs text-gray-500 dark:text-gray-400 text-center">
-              Empresa inscrita en la Zona Especial Canaria (ZEC)
+              {t('company.zec')}
             </p>
           </div>
 
@@ -87,10 +90,10 @@ export function Footer() {
           {/* Address and Legal */}
           <div className="text-center space-y-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              Santa Cruz de Tenerife, Islas Canarias, España
+              {t('company.address')}
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              &copy; {new Date().getFullYear()} Persevida SL. Todos los derechos reservados.
+              &copy; {new Date().getFullYear()} {t('legal.copyright')}
             </p>
           </div>
         </div>

@@ -153,7 +153,18 @@ async function getDatabaseList(): Promise<string[]> {
     return data.result;
   } catch (error) {
     console.error("Error getting database list:", error);
-    throw new Error('Unable to connect to Odoo server');
+    if (!API_URL) {
+      throw new Error('Odoo server URL not configured. Please check your environment variables.');
+    }
+    if (error instanceof Error && (
+      error.message.includes('ERR_INVALID_URL') || 
+      error.message.includes('ECONNREFUSED') ||
+      error.message.includes('ENOTFOUND')
+    )) {
+      throw new Error(`Unable to connect to Odoo server at ${API_URL}`);
+    } else {
+      throw error;
+    }
   }
 }
 
@@ -194,7 +205,8 @@ export async function login(login: string, password: string): Promise<{ sessionI
     });
 
     if (!response.ok) {
-      throw new Error(`Authentication failed: ${response.status}`);
+      console.error('Login failed: Invalid credentials');
+      return { sessionId: null, user: null };
     }
 
     const setCookie = response.headers.get("Set-Cookie");
@@ -215,13 +227,14 @@ export async function login(login: string, password: string): Promise<{ sessionI
     }
 
     const responseData = await response.json();
-    console.log('responseData', responseData);
+    
+    // Handle authentication errors
     if (responseData.error) {
-      throw new Error(responseData.error.data.message || 'Login failed');
+      console.error('Login failed: Invalid credentials');
+      return { sessionId: null, user: null };
     }
 
     if (responseData.result && responseData.result.uid) {
-      console.log('responseData.result', responseData.result);
       const user: User = {
         id: responseData.result.uid,
         name: responseData.result.name,
@@ -249,15 +262,12 @@ export async function login(login: string, password: string): Promise<{ sessionI
       };
       return { sessionId, user };
     } else {
-      throw new Error('Invalid credentials');
+      console.error('Login failed: Invalid credentials');
+      return { sessionId: null, user: null };
     }
-  } catch (error) {
-    console.error('Login error:', error);
-    if (error instanceof Error) {
-      throw new Error(`Login failed: ${error.message}`);
-    } else {
-      throw new Error('An unexpected error occurred during login');
-    }
+  } catch {
+    console.error('Login failed: Invalid credentials');
+    return { sessionId: null, user: null };
   }
 }
 

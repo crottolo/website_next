@@ -1,69 +1,72 @@
 "use client";
 
+import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
-import Link from "next/link"
+import { Link } from '@/i18n/routing'
 import { Code, Cloud, Settings, Zap, Shield, Users, Database, ArrowRight } from "lucide-react"
 
 export default function OdooPage() {
+  const t = useTranslations('OdooPage');
+
   const versions = [
     {
       version: "Odoo 18.0",
-      status: "Early Access Partner",
-      features: "Latest innovations and improvements",
+      status: t('versions.items.18.status'),
+      features: t('versions.items.18.features'),
       icon: Zap
     },
     {
       version: "Odoo 17.0",
-      status: "Full Support",
-      features: "Current stable version with all features",
+      status: t('versions.items.17.status'),
+      features: t('versions.items.17.features'),
       icon: Shield
     },
     {
       version: "Odoo 16.0",
-      status: "Enterprise Ready",
-      features: "Proven stability and performance",
+      status: t('versions.items.16.status'),
+      features: t('versions.items.16.features'),
       icon: Database
     },
     {
       version: "Odoo 14.0-15.0",
-      status: "Legacy Support",
-      features: "Maintenance and upgrades",
+      status: t('versions.items.14-15.status'),
+      features: t('versions.items.14-15.features'),
       icon: Settings
     }
   ]
 
   const services = [
     {
-      title: "Implementation",
-      description: "Full-scale Odoo implementation tailored to your business needs",
+      title: t('services.implementation.title'),
+      description: t('services.implementation.description'),
       features: [
-        "Business process analysis",
-        "Module selection and configuration",
-        "Data migration",
-        "User training and support"
+        t('services.implementation.features.analysis'),
+        t('services.implementation.features.configuration'),
+        t('services.implementation.features.migration'),
+        t('services.implementation.features.training')
       ],
       icon: Cloud
     },
     {
-      title: "Development",
-      description: "Custom module development and system integration",
+      title: t('services.development.title'),
+      description: t('services.development.description'),
       features: [
-        "Custom module creation",
-        "API integration",
-        "Third-party system connection",
-        "Performance optimization"
+        t('services.development.features.modules'),
+        t('services.development.features.api'),
+        t('services.development.features.integration'),
+        t('services.development.features.optimization')
       ],
       icon: Code
     },
     {
-      title: "Support",
-      description: "Comprehensive technical support and maintenance",
+      title: t('services.support.title'),
+      description: t('services.support.description'),
       features: [
-        "24/7 technical assistance",
-        "Bug fixing",
-        "Performance monitoring",
-        "Regular updates"
+        t('services.support.features.assistance'),
+        t('services.support.features.bugfix'),
+        t('services.support.features.monitoring'),
+        t('services.support.features.updates')
       ],
       icon: Users
     }
@@ -77,10 +80,10 @@ export default function OdooPage() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
-                  Odoo Solutions
+                  {t('hero.title')}
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
-                  Expert Odoo development and implementation services for all versions
+                  {t('hero.subtitle')}
                 </p>
               </div>
             </div>
@@ -89,7 +92,7 @@ export default function OdooPage() {
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Versions</h2>
+            <h2 className="text-3xl font-bold text-white text-center mb-12">{t('versions.title')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {versions.map((version, i) => (
                 <BackgroundGradient key={i}>
@@ -107,7 +110,7 @@ export default function OdooPage() {
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-black">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Our Odoo Services</h2>
+            <h2 className="text-3xl font-bold text-white text-center mb-12">{t('services.title')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, i) => (
                 <BackgroundGradient key={i}>
@@ -130,14 +133,14 @@ export default function OdooPage() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold text-white">Ready to Upgrade Your Business?</h2>
+              <h2 className="text-3xl font-bold text-white">{t('cta.title')}</h2>
               <p className="text-gray-400 max-w-[600px] mx-auto">
-                Let us help you implement or optimize your Odoo ERP system
+                {t('cta.subtitle')}
               </p>
               <div className="flex justify-center gap-4">
                 <Link href="/contact">
                   <Button className="bg-green-600 hover:bg-green-700 text-white">
-                    Get Started
+                    {t('cta.buttons.start')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -146,7 +149,7 @@ export default function OdooPage() {
                     variant="outline"
                     className="border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50"
                   >
-                    View Success Stories
+                    {t('cta.buttons.cases')}
                   </Button>
                 </Link>
               </div>

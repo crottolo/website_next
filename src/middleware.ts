@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
 
 // Add paths that require authentication
 const protectedPaths = ["/dashboard"];
@@ -7,35 +9,35 @@ const protectedPaths = ["/dashboard"];
 // Add paths that should not be accessible when authenticated
 const authPaths = ["/signin", "/register"];
 
-export function middleware(request: NextRequest) {
+// Create the internationalization middleware
+const intlMiddleware = createMiddleware(routing);
+
+export async function middleware(request: NextRequest) {
   const currentUser = request.cookies.get("session_id");
   const { pathname } = request.nextUrl;
 
-  // Redirect authenticated users trying to access auth pages
+  // Handle authentication redirects
   if (currentUser && authPaths.includes(pathname)) {
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
 
-  // Redirect unauthenticated users trying to access protected pages
   if (!currentUser && protectedPaths.some(path => pathname.startsWith(path))) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
-  return NextResponse.next();
+  // Apply internationalization middleware
+  return intlMiddleware(request);
 }
 
-// Correct format for Next.js middleware config
+// Combine matchers for both authentication and internationalization
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
+    // Authentication paths
     "/dashboard/:path*",
     "/signin",
-    "/register"
+    "/register",
+    // Internationalization paths
+    '/',
+    '/(it|en)/:path*'
   ]
 } 

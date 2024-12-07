@@ -1,77 +1,80 @@
 "use client";
 
+import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
-import Link from "next/link"
+import { Link } from '@/i18n/routing'
 import { Code, Cloud, Cog, Database, Server, Users, Rocket, Laptop } from "lucide-react"
 
 export default function ServicesPage() {
+  const t = useTranslations('ServicesPage');
+
   const services = [
     {
-      title: "Odoo Development",
-      description: "Custom Odoo modules and implementations tailored to your business needs. Supporting versions 14.0 through 18.0.",
+      title: t('mainServices.odoo.title'),
+      description: t('mainServices.odoo.description'),
       icon: Code,
       features: [
-        "Custom module development",
-        "Version upgrades and migrations",
-        "Integration with third-party systems",
-        "Performance optimization"
+        t('mainServices.odoo.features.modules'),
+        t('mainServices.odoo.features.upgrades'),
+        t('mainServices.odoo.features.integration'),
+        t('mainServices.odoo.features.optimization')
       ]
     },
     {
-      title: "SAAS Solutions",
-      description: "Cloud-based software solutions with high availability and scalability for your growing business.",
+      title: t('mainServices.saas.title'),
+      description: t('mainServices.saas.description'),
       icon: Cloud,
       features: [
-        "Managed cloud hosting",
-        "Automatic backups",
-        "High availability setup",
-        "Security monitoring"
+        t('mainServices.saas.features.hosting'),
+        t('mainServices.saas.features.backups'),
+        t('mainServices.saas.features.availability'),
+        t('mainServices.saas.features.security')
       ]
     },
     {
-      title: "ERP Implementation",
-      description: "Full-scale Odoo ERP implementation and customization services for businesses of all sizes.",
+      title: t('mainServices.erp.title'),
+      description: t('mainServices.erp.description'),
       icon: Database,
       features: [
-        "Business process analysis",
-        "Data migration",
-        "User training",
-        "Post-implementation support"
+        t('mainServices.erp.features.analysis'),
+        t('mainServices.erp.features.migration'),
+        t('mainServices.erp.features.training'),
+        t('mainServices.erp.features.support')
       ]
     },
     {
-      title: "Custom Development",
-      description: "Bespoke software solutions designed and developed to address your specific business challenges.",
+      title: t('mainServices.custom.title'),
+      description: t('mainServices.custom.description'),
       icon: Cog,
       features: [
-        "Web applications",
-        "API development",
-        "System integration",
-        "Legacy system modernization"
+        t('mainServices.custom.features.web'),
+        t('mainServices.custom.features.api'),
+        t('mainServices.custom.features.integration'),
+        t('mainServices.custom.features.modernization')
       ]
     }
   ]
 
   const additionalServices = [
     {
-      title: "Technical Support",
-      description: "24/7 technical support for all your Odoo and custom software needs",
+      title: t('additional.support.title'),
+      description: t('additional.support.description'),
       icon: Users
     },
     {
-      title: "Cloud Migration",
-      description: "Seamless migration of your existing systems to cloud infrastructure",
+      title: t('additional.cloud.title'),
+      description: t('additional.cloud.description'),
       icon: Server
     },
     {
-      title: "ZEC Benefits",
-      description: "Take advantage of Canary Islands Special Zone tax incentives",
+      title: t('additional.zec.title'),
+      description: t('additional.zec.description'),
       icon: Rocket
     },
     {
-      title: "System Integration",
-      description: "Connect your business systems for improved efficiency",
+      title: t('additional.integration.title'),
+      description: t('additional.integration.description'),
       icon: Laptop
     }
   ]
@@ -84,10 +87,10 @@ export default function ServicesPage() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
-                  Our Services
+                  {t('hero.title')}
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
-                  Comprehensive software solutions to drive your business forward
+                  {t('hero.subtitle')}
                 </p>
               </div>
             </div>
@@ -117,7 +120,7 @@ export default function ServicesPage() {
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-black">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Additional Services</h2>
+            <h2 className="text-3xl font-bold text-white text-center mb-12">{t('additional.title')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {additionalServices.map((service, i) => (
                 <BackgroundGradient key={i}>
@@ -135,14 +138,14 @@ export default function ServicesPage() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold text-white">Ready to Get Started?</h2>
+              <h2 className="text-3xl font-bold text-white">{t('cta.title')}</h2>
               <p className="text-gray-400 max-w-[600px] mx-auto">
-                Contact us to discuss how we can help transform your business with our software solutions
+                {t('cta.subtitle')}
               </p>
               <div className="flex justify-center gap-4">
                 <Link href="/contact">
                   <Button className="bg-green-600 hover:bg-green-700 text-white">
-                    Contact Us
+                    {t('cta.buttons.contact')}
                   </Button>
                 </Link>
                 <Link href="/cases">
@@ -150,7 +153,7 @@ export default function ServicesPage() {
                     variant="outline"
                     className="border-green-600 text-green-600 hover:text-green-600 hover:bg-green-50/50 dark:border-green-400 dark:text-green-400 dark:hover:text-green-400 dark:hover:bg-green-950/50"
                   >
-                    View Case Studies
+                    {t('cta.buttons.cases')}
                   </Button>
                 </Link>
               </div>
