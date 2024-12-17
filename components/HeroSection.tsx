@@ -1,7 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { IconBrandGithub, IconBrandInstagram, IconBrandFacebook } from '@tabler/icons-react';
+import {
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandFacebook,
+} from '@tabler/icons-react';
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
@@ -74,7 +78,13 @@ export const HeroSection = () => {
             className="relative h-48 w-48 rounded-full bg-black p-2"
           >
             <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-white/10">
-              <Image src="/crottolo.jpg" alt="Profile" fill className="object-cover" priority />
+              <Image
+                src="/crottolo.jpg"
+                alt="Profile"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </motion.div>
         </motion.div>
@@ -95,8 +105,8 @@ export const HeroSection = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="mx-auto mt-4 max-w-lg text-center text-base font-normal text-neutral-300 md:text-lg"
         >
-          Create stunning websites and applications with our modern development stack. Get started
-          now and bring your ideas to life.
+          Create stunning websites and applications with our modern development
+          stack. Get started now and bring your ideas to life.
         </motion.p>
         {/* Social buttons with hover effects */}
         <motion.div
@@ -114,14 +124,18 @@ export const HeroSection = () => {
           </button>
           <button
             className="flex items-center gap-2 rounded-xl border border-white bg-transparent px-6 py-3 font-medium text-white transition-colors hover:bg-white/10"
-            onClick={() => window.open('https://instagram.com/crottolo', '_blank')}
+            onClick={() =>
+              window.open('https://instagram.com/crottolo', '_blank')
+            }
           >
             <IconBrandInstagram className="h-5 w-5" />
             Follow on Instagram
           </button>
           <button
             className="flex items-center gap-2 rounded-xl border border-white bg-transparent px-6 py-3 font-medium text-white transition-colors hover:bg-white/10"
-            onClick={() => window.open('https://facebook.com/crottolo', '_blank')}
+            onClick={() =>
+              window.open('https://facebook.com/crottolo', '_blank')
+            }
           >
             <IconBrandFacebook className="h-5 w-5" />
             Follow on Facebook
