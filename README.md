@@ -1,70 +1,8 @@
-# Persevida SL Website
-
-A modern, responsive website built with Next.js 15 for Persevida SL, a software development company specializing in Odoo solutions.
-
-## Technologies
-
-- **Framework**: Next.js 15 (App Router)
-- **Styling**: Tailwind CSS
-- **UI Components**: Custom components with shadcn/ui
-- **Animations**: Framer Motion
-- **Language**: TypeScript
-- **Authentication**: NextAuth.js
-- **Deployment**: Vercel
-
-## Features
-
-- 🌙 Dark/Light mode support
-- 📱 Fully responsive design
-- ⚡ Server-side rendering
-- 🎨 Modern UI with gradient animations
-- 🔒 Authentication system
-- 🌍 SEO optimized
-
-## Project Structure
-
-```plaintext
-src/
-├── app/                    # Next.js app router pages
-│   ├── about/             # About page
-│   ├── services/          # Services page
-│   ├── odoo/              # Odoo solutions page
-│   └── ...
-├── components/            # Reusable components
-│   ├── ui/               # UI components
-│   ├── site-header.tsx   # Main navigation
-│   └── site-footer.tsx   # Footer component
-├── lib/                   # Utility functions
-├── styles/               # Global styles
-└── types/                # TypeScript types
-```
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/yourusername/persevida-website.git
-cd persevida-website
-```
-
-### 2. Install dependencies
-
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-### 3. Set up environment variables
-
-```bash
-cp .env.example .env.local
-```
-
-### 4. Run the development server
+First, run the development server:
 
 ```bash
 npm run dev
@@ -72,45 +10,27 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+# or
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Development Guidelines
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Follow TypeScript best practices
-- Use Tailwind CSS for styling
-- Keep components modular and reusable
-- Follow Next.js App Router conventions
-- Write meaningful commit messages
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Deployment
+## Learn More
 
-The project is configured for deployment on Vercel. Push to the main branch will automatically trigger a deployment.
+To learn more about Next.js, take a look at the following resources:
 
-## Environment Variables
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Required environment variables:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```plaintext
-NEXT_PUBLIC_SITE_URL=https://www.persevida.com
-NEXTAUTH_SECRET=your-secret-here
-DATABASE_URL=your-database-url
-```
+## Deploy on Vercel
 
-## Contributing
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-1. Create a feature branch
-2. Make your changes
-3. Submit a pull request
-
-## License
-
-This project is private and proprietary to Persevida SL.
-
-## Contact
-
-For any queries regarding the project, contact:
-
-- **Email**: info@persevida.com
-- **Location**: Santa Cruz de Tenerife, Canary Islands
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
