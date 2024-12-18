@@ -1,114 +1,125 @@
+import { Metadata, Viewport } from 'next';
 import { HeroSection } from '@/components/HeroSection';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
-import { Metadata } from 'next';
 
-const projects = [
+const features = [
   {
-    title: 'Odoo Development',
+    title: 'Segnalazione Immediata',
     description:
-      'Custom module development, integrations, and customizations for Odoo ERP. Versions 14.0, 15.0, 16.0, 17.0, 18.0',
+      'Segnala le chiamate indesiderate istantaneamente attraverso la nostra app intuitiva. Traccia e documenta ogni chiamata spam.',
     link: '#',
   },
   {
-    title: 'FastAPI & Python',
+    title: 'Azione Legale Collettiva',
     description:
-      'High-performance RESTful API development with FastAPI. Robust Python backend and automation solutions.',
+      'Unisciti ad altri utenti per intraprendere azioni legali contro call center e truffatori persistenti.',
     link: '#',
   },
   {
-    title: 'LLM & AI Integration',
+    title: 'Identificazione Chiamate',
     description:
-      'Integration of advanced language models and artificial intelligence solutions into business processes.',
+      'Sistema avanzato di identificazione delle chiamate per riconoscere e avvisarti di potenziali chiamate spam prima di rispondere.',
     link: '#',
   },
   {
-    title: '3CX Phone System',
+    title: 'Rimborso Garantito',
     description:
-      '3CX phone system configuration and customization. Integration with CRM and existing systems.',
+      'Possibilità di ottenere un rimborso per ogni chiamata indesiderata documentata attraverso il nostro processo legale.',
     link: '#',
   },
   {
-    title: 'Web Development',
+    title: 'Business Verification',
     description:
-      'Modern web application development with Next.js, React, and TypeScript. UI/UX design and implementation.',
+      'Le aziende legittime possono registrare i propri call center per aumentare la fiducia e il tasso di risposta.',
     link: '#',
   },
   {
-    title: 'DevOps & Cloud',
+    title: 'Community Protection',
     description:
-      'Cloud infrastructure management, CI/CD, Docker containerization, and Kubernetes orchestration.',
+      'Unisciti a una community in crescita che lavora insieme per fermare le chiamate indesiderate e proteggere i diritti dei consumatori.',
     link: '#',
   },
 ];
 
+export const viewport: Viewport = {
+  colorScheme: 'dark',
+  themeColor: '#A855F7',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: 'Crottolo - Full Stack Developer & AI Specialist',
+  title: 'Opponiti.com - Stop alle chiamate indesiderate',
   description:
-    'Full Stack Developer specialized in Odoo, FastAPI, LLM, and 3CX. Developing modern web solutions integrated with artificial intelligence.',
+    'Unisciti alla rivoluzione contro le chiamate indesiderate. Segnala, proteggi e ottieni un rimborso per ogni chiamata spam.',
   keywords: [
-    'Odoo',
-    'Full Stack',
-    'Developer',
-    'Next.js',
-    'React',
-    'TypeScript',
-    'FastAPI',
-    'LLM',
-    '3CX',
-    'AI',
-    'Machine Learning',
-    'Python',
-    'Web Development',
+    'chiamate indesiderate',
+    'spam telefonico',
+    'protezione consumatori',
+    'call center',
+    'rimborso chiamate',
+    'azione legale',
+    'app anti spam',
+    'tutela privacy',
   ],
-  authors: [{ name: 'Crottolo' }],
-  creator: 'Crottolo',
-  publisher: 'Crottolo',
+  authors: [{ name: 'Opponiti.com' }],
+  creator: 'Opponiti.com',
+  publisher: 'Opponiti.com',
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'Crottolo - Full Stack Developer & AI Specialist',
+    title: 'Opponiti.com - Stop alle chiamate indesiderate',
     description:
-      'Full Stack Developer specialized in Odoo, FastAPI, LLM, and 3CX. Developing modern web solutions integrated with artificial intelligence.',
-    url: 'https://rcrotti.it',
-    siteName: 'Crottolo Portfolio',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Crottolo Portfolio - Full Stack & AI Development',
-      },
-    ],
-    locale: 'en_US',
+      'Unisciti alla rivoluzione contro le chiamate indesiderate. Segnala, proteggi e ottieni un rimborso per ogni chiamata spam.',
+    url: 'https://opponiti.com',
+    siteName: 'Opponiti.com',
+    locale: 'it_IT',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Crottolo - Full Stack Developer & AI Specialist',
+    title: 'Opponiti.com - Stop alle chiamate indesiderate',
     description:
-      'Full Stack Developer specialized in Odoo, FastAPI, LLM, and 3CX. Developing modern web solutions integrated with artificial intelligence.',
-    images: ['/og-image.jpg'],
+      'Unisciti alla rivoluzione contro le chiamate indesiderate. Segnala, proteggi e ottieni un rimborso per ogni chiamata spam.',
   },
 };
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-black">
       <HeroSection />
-      <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-black px-4 py-24">
+      
+      {/* Features Section */}
+      <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-black/[0.96] px-4 py-24">
         <div className="container">
-          <div className="mb-8 flex flex-col justify-center gap-4 items-center">
-            <h2 className="text-4xl font-bold text-white md:text-5xl lg:text-7xl">
-              Specializations
+          <div className="mb-12 flex flex-col justify-center gap-4 items-center">
+            <h2 className="text-4xl font-bold text-white md:text-5xl lg:text-7xl text-center">
+              Come Funziona
             </h2>
-            <p className="max-w-2xl text-base text-neutral-200 md:text-lg">
-              Explore my core competencies and discover how I can help you bring
-              your projects to life.
+            <p className="max-w-2xl text-base text-white/95 md:text-lg text-center">
+              Trasforma ogni chiamata indesiderata in un&apos;opportunità di cambiamento
             </p>
           </div>
-          <HoverEffect items={projects} />
+          <HoverEffect items={features} />
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="relative w-full bg-gradient-to-b from-black via-purple-950/50 to-purple-900 px-4 py-24">
+        <div className="container mx-auto text-center">
+          <h2 className="mb-8 text-3xl font-bold text-white md:text-4xl">
+            Unisciti alla Rivoluzione
+          </h2>
+          <p className="mb-8 mx-auto max-w-2xl text-lg text-white/95">
+            Se per ogni call center che ti ha chiamato ricevessi un euro, saresti milionario?
+            È ora di dire basta e far valere i tuoi diritti.
+          </p>
+          <button className="rounded-full bg-gradient-to-br from-purple-600/20 to-white/5 px-8 py-4 text-lg font-semibold text-white hover:from-purple-600/30 hover:to-white/10 transition-all border border-purple-500/20 shadow-lg shadow-purple-500/10">
+            Scarica l&apos;App
+          </button>
         </div>
       </section>
     </main>

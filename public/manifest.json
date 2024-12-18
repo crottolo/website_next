@@ -1,0 +1,17 @@
+{
+  "name": "Opponiti.com",
+  "short_name": "Opponiti",
+  "description": "Stop alle chiamate indesiderate",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#A855F7",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+} 
