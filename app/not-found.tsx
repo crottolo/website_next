@@ -2,24 +2,29 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
+
+export const viewport: Viewport = {
+  colorScheme: 'dark',
+  themeColor: '#A855F7',
+};
 
 export const metadata: Metadata = {
-  title: 'Pagina non trovata - 404 | Crottolo',
+  title: 'Pagina non trovata - 404 | Opponiti.com',
   description: 'La pagina che stai cercando non esiste o è stata spostata.',
   robots: {
     index: false,
     follow: true,
   },
   openGraph: {
-    title: 'Pagina non trovata - 404 | Crottolo',
+    title: 'Pagina non trovata - 404 | Opponiti.com',
     description: 'La pagina che stai cercando non esiste o è stata spostata.',
     images: [
       {
         url: '/og-404.jpg',
         width: 1200,
         height: 630,
-        alt: 'Pagina 404 - Crottolo',
+        alt: 'Pagina 404 - Opponiti.com',
       },
     ],
   },

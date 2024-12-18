@@ -9,7 +9,25 @@ export const metadata: Metadata = {
     template: '%s | Opponiti.com',
     default: 'Opponiti.com - Stop alle chiamate indesiderate',
   },
-  description: 'Unisciti alla rivoluzione contro le chiamate indesiderate. Segnala, proteggi e ottieni un rimborso per ogni chiamata spam.',
+  description:
+    'Unisciti alla rivoluzione contro le chiamate indesiderate. Segnala, proteggi e ottieni un rimborso per ogni chiamata spam.',
+  keywords: [
+    'chiamate indesiderate',
+    'spam telefonico',
+    'protezione consumatori',
+    'call center',
+    'rimborso chiamate',
+    'azione legale',
+    'app anti spam',
+    'tutela privacy',
+  ],
+  authors: [{ name: 'Opponiti.com' }],
+  creator: 'Opponiti.com',
+  publisher: 'Opponiti.com',
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       {
@@ -28,11 +46,20 @@ export const metadata: Metadata = {
     ]
   },
   manifest: '/manifest.json',
-  themeColor: '#A855F7',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-  robots: {
-    index: true,
-    follow: true,
+  openGraph: {
+    title: 'Opponiti.com - Stop alle chiamate indesiderate',
+    description:
+      'Unisciti alla rivoluzione contro le chiamate indesiderate. Segnala, proteggi e ottieni un rimborso per ogni chiamata spam.',
+    url: 'https://opponiti.com',
+    siteName: 'Opponiti.com',
+    locale: 'it_IT',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Opponiti.com - Stop alle chiamate indesiderate',
+    description:
+      'Unisciti alla rivoluzione contro le chiamate indesiderate. Segnala, proteggi e ottieni un rimborso per ogni chiamata spam.',
   },
 };
 
