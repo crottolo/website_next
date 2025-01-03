@@ -83,9 +83,14 @@ const Dashboard = () => {
             <Image
               src={user.image_url}
               alt="Profile"
-              width={48}
-              height={48}
-              className="rounded-full"
+              width={user.image_width}
+              height={user.image_height}
+              className="rounded-full object-cover"
+              style={{
+                width: '48px',
+                height: '48px',
+              }}
+              priority
             />
           )}
           <div>

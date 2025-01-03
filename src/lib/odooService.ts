@@ -2,13 +2,16 @@
 
 import { cookies } from 'next/headers';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = process.env.ODOO_API_URL;
+
 
 export interface User {
   id: number;
   name: string;
   username: string;
   image_url: string;
+  image_width: number;
+  image_height: number;
   partner_id: number;
   database: string;
   is_system: boolean;
@@ -86,16 +89,17 @@ export async function checkSession(): Promise<User | null> {
     if (!response.ok) {
       return null;
     }
-
     const data = await response.json();
     if (data.result && data.result.uid) {
-      console.log('data.result', data.result);
+      // console.log('data.result', data.result);
       return {
         id: data.result.uid,
         name: data.result.name,
         username: data.result.username,
         partner_id: data.result.partner_id,
-        image_url: `${API_URL}/web/image?model=res.users&id=${data.result.uid}&field=image_128`,
+        image_url: await getUserImage(data.result.uid),
+        image_width: 128,
+        image_height: 128,
         database: data.result.db,
         is_system: data.result.is_system,
         is_admin: data.result.is_admin,
@@ -221,13 +225,14 @@ export async function login(login: string, password: string): Promise<{ sessionI
     }
 
     if (responseData.result && responseData.result.uid) {
-      console.log('responseData.result', responseData.result);
       const user: User = {
         id: responseData.result.uid,
         name: responseData.result.name,
         username: responseData.result.username,
         partner_id: responseData.result.partner_id,
-        image_url: `${API_URL}/web/image?model=res.users&id=${responseData.result.uid}&field=image_128`,
+        image_url: await getUserImage(responseData.result.uid),
+        image_width: 128,
+        image_height: 128,
         database: database,
         is_system: responseData.result.is_system,
         is_admin: responseData.result.is_admin,
@@ -304,5 +309,51 @@ export async function clearSession(): Promise<void> {
     await cookieStore.delete('session_id');
   } catch (error) {
     console.error("Error clearing session:", error);
+  }
+}
+
+/**
+ * Get URL for user image
+ * @param userId User ID
+ * @returns URL for the user image
+ */
+export async function getUserImageUrl(userId: number): Promise<string> {
+  return `${API_URL}/web/image?model=res.users&id=${userId}&field=image_128`;
+}
+
+/**
+ * Get user image with proper authentication
+ * @param userId User ID
+ * @returns Base64 encoded image data
+ */
+export async function getUserImage(userId: number): Promise<string> {
+  try {
+    const cookieStore = await cookies();
+    const sessionId = await cookieStore.get('session_id');
+
+    if (!sessionId) {
+      throw new Error('No session found');
+    }
+
+    const response = await fetch(`${API_URL}/web/image?model=res.users&id=${userId}&field=image_128`, {
+      method: 'GET',
+      headers: {
+        'Cookie': `session_id=${sessionId.value}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch image');
+    }
+
+    const blob = await response.blob();
+    const arrayBuffer = await blob.arrayBuffer();
+    const base64 = Buffer.from(arrayBuffer).toString('base64');
+    const mimeType = blob.type || 'image/png';
+    
+    return `data:${mimeType};base64,${base64}`;
+  } catch (error) {
+    console.error('Error fetching user image:', error);
+    return '';
   }
 } 

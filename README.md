@@ -1,101 +1,115 @@
-# Persevida SL Website
+# Website Next.js with Odoo Integration
 
-A modern, responsive website built with Next.js 15 for Persevida SL, a software development company specializing in Odoo solutions.
+A modern, responsive website built with Next.js 15 that integrates with Odoo ERP system. Features a secure authentication system and dashboard for Odoo users.
 
 ## Technologies
 
 - **Framework**: Next.js 15 (App Router)
-- **Styling**: Tailwind CSS
-- **UI Components**: Custom components with shadcn/ui
-- **Animations**: Framer Motion
+- **Runtime**: Node.js
 - **Language**: TypeScript
-- **Authentication**: NextAuth.js
-- **Deployment**: Vercel
+- **Styling**: 
+  - Tailwind CSS
+  - shadcn/ui components
+  - CSS Modules
+- **State Management**: React Context
+- **Authentication**: Custom Odoo authentication
+- **Development Tools**:
+  - ESLint
+  - Turbopack
+  - PostCSS
 
 ## Features
 
-- 🌙 Dark/Light mode support
+- 🔒 Secure Odoo authentication system
+- 🌙 Dark/Light mode support with next-themes
 - 📱 Fully responsive design
-- ⚡ Server-side rendering
-- 🎨 Modern UI with gradient animations
-- 🔒 Authentication system
-- 🌍 SEO optimized
+- ⚡ Server-side rendering and Server Actions
+- 🎨 Modern UI with shadcn/ui components
+- 🔄 Real-time session management
+- 🌍 SEO optimized with dynamic sitemap and robots.txt
+- 🎭 Framer Motion animations
 
 ## Project Structure
 
 ```plaintext
-src/
-├── app/                    # Next.js app router pages
-│   ├── about/             # About page
-│   ├── services/          # Services page
-│   ├── odoo/              # Odoo solutions page
-│   └── ...
-├── components/            # Reusable components
-│   ├── ui/               # UI components
-│   ├── site-header.tsx   # Main navigation
-│   └── site-footer.tsx   # Footer component
-├── lib/                   # Utility functions
-├── styles/               # Global styles
-└── types/                # TypeScript types
+.
+├── src/
+│   ├── app/                    # Next.js app router pages
+│   │   ├── about/             # About page
+│   │   ├── dashboard/         # User dashboard
+│   │   ├── login/            # Authentication pages
+│   │   ├── odoo/             # Odoo integration pages
+│   │   ├── register/         # Registration pages
+│   │   └── services/         # Services pages
+│   ├── components/           # Reusable components
+│   ├── context/              # React Context providers
+│   └── lib/                  # Utility functions and services
+├── public/                   # Static assets
+└── ...config files
 ```
 
 ## Getting Started
 
-### 1. Clone the repository
+### Prerequisites
 
+- Node.js 18.x or later
+- pnpm (recommended) or npm
+- Odoo server instance
+
+### Installation
+
+1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/persevida-website.git
-cd persevida-website
+git clone <repository-url>
+cd website_next
 ```
 
-### 2. Install dependencies
-
+2. Install dependencies:
 ```bash
-npm install
-# or
-yarn install
-# or
 pnpm install
 ```
 
-### 3. Set up environment variables
-
+3. Set up environment variables:
 ```bash
 cp .env.example .env.local
 ```
 
-### 4. Run the development server
+Required environment variables:
+```plaintext
+ODOO_API_URL=your-odoo-server-url  # Example: http://localhost:8069
+```
 
+4. Start the development server:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at [http://localhost:3000](http://localhost:3000).
 
-## Development Guidelines
+## Development
 
-- Follow TypeScript best practices
-- Use Tailwind CSS for styling
-- Keep components modular and reusable
-- Follow Next.js App Router conventions
-- Write meaningful commit messages
+- Uses Next.js 15 App Router for routing
+- Server Components and Server Actions for optimal performance
+- TypeScript for type safety
+- Tailwind CSS for styling
+- shadcn/ui for UI components
 
-## Deployment
+### Key Features Implementation
 
-The project is configured for deployment on Vercel. Push to the main branch will automatically trigger a deployment.
+- **Authentication**: Custom implementation using Odoo's authentication endpoints
+- **Dashboard**: Real-time user data display with session management
+- **Theme**: Dark/Light mode with system preference detection
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
 
-## Environment Variables
+## Building for Production
 
-Required environment variables:
+```bash
+pnpm build
+```
 
-```plaintext
-NEXT_PUBLIC_SITE_URL=https://www.persevida.com
-NEXTAUTH_SECRET=your-secret-here
-DATABASE_URL=your-database-url
+To start the production server:
+```bash
+pnpm start
 ```
 
 ## Contributing
@@ -106,11 +120,10 @@ DATABASE_URL=your-database-url
 
 ## License
 
-This project is private and proprietary to Persevida SL.
+This project is proprietary software.
 
-## Contact
+## Support
 
-For any queries regarding the project, contact:
-
-- **Email**: info@persevida.com
-- **Location**: Santa Cruz de Tenerife, Canary Islands
+For support and queries:
+- Create an issue in the repository
+- Contact the development team
