@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.persevida.com'
+  const baseUrl = 'https://persevida.com'
 
   // Static pages configuration
   const routes = [
