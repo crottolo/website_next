@@ -15,7 +15,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.persevida.com'),
+  metadataBase: new URL('https://persevida.com'),
   title: {
     template: '%s | Persevida SL',
     default: 'Persevida SL | Software Development & Odoo Solutions',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.persevida.com',
+    url: 'https://persevida.com',
     siteName: 'Persevida SL',
     title: 'Persevida SL | Software Development & Odoo Solutions',
     description: 'Professional software development company specializing in Odoo ERP solutions. ZEC registered company offering SAAS and custom development.',
@@ -67,10 +67,10 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://www.persevida.com',
+    canonical: 'https://persevida.com',
     languages: {
-      'en-US': 'https://www.persevida.com',
-      'es-ES': 'https://www.persevida.com/es',
+      'en-US': 'https://persevida.com',
+      'es-ES': 'https://persevida.com/es',
     },
   },
   manifest: '/favicon/site.webmanifest',
