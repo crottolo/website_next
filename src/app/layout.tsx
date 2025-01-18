@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { AuthProvider } from "@/context/AuthContext"
 import { Metadata, Viewport } from 'next'
 import "./globals.css"
+import PlausibleProvider from "next-plausible"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -100,13 +101,15 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning className="dark">
       <body className={`${inter.className} min-h-screen bg-background antialiased dark`}>
         <ThemeProvider attribute='class' defaultTheme='dark' enableSystem={false}>
+          <PlausibleProvider domain="persevida.com" customDomain="https://plausible.fl1.it" selfHosted trackLocalhost enabled>
           <AuthProvider>
             <div className='relative flex min-h-screen flex-col'>
               <SiteHeader />
               <main className='flex-1 flex flex-col'>{children}</main>
               <SiteFooter />
-            </div>
-          </AuthProvider>
+              </div>
+            </AuthProvider>
+          </PlausibleProvider>
         </ThemeProvider>
       </body>
     </html>
