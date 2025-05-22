@@ -1,129 +1,36 @@
-# Website Next.js with Odoo Integration
-
-A modern, responsive website built with Next.js 15 that integrates with Odoo ERP system. Features a secure authentication system and dashboard for Odoo users.
-
-## Technologies
-
-- **Framework**: Next.js 15 (App Router)
-- **Runtime**: Node.js
-- **Language**: TypeScript
-- **Styling**: 
-  - Tailwind CSS
-  - shadcn/ui components
-  - CSS Modules
-- **State Management**: React Context
-- **Authentication**: Custom Odoo authentication
-- **Development Tools**:
-  - ESLint
-  - Turbopack
-  - PostCSS
-
-## Features
-
-- 🔒 Secure Odoo authentication system
-- 🌙 Dark/Light mode support with next-themes
-- 📱 Fully responsive design
-- ⚡ Server-side rendering and Server Actions
-- 🎨 Modern UI with shadcn/ui components
-- 🔄 Real-time session management
-- 🌍 SEO optimized with dynamic sitemap and robots.txt
-- 🎭 Framer Motion animations
-
-## Project Structure
-
-```plaintext
-.
-├── src/
-│   ├── app/                    # Next.js app router pages
-│   │   ├── about/             # About page
-│   │   ├── dashboard/         # User dashboard
-│   │   ├── login/            # Authentication pages
-│   │   ├── odoo/             # Odoo integration pages
-│   │   ├── register/         # Registration pages
-│   │   └── services/         # Services pages
-│   ├── components/           # Reusable components
-│   ├── context/              # React Context providers
-│   └── lib/                  # Utility functions and services
-├── public/                   # Static assets
-└── ...config files
-```
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### Prerequisites
+First, run the development server:
 
-- Node.js 18.x or later
-- pnpm (recommended) or npm
-- Odoo server instance
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd website_next
-```
-
-2. Install dependencies:
-```bash
-pnpm install
-```
-
-3. Set up environment variables:
-```bash
-cp .env.example .env.local
-```
-
-Required environment variables:
-```plaintext
-ODOO_API_URL=your-odoo-server-url  # Example: http://localhost:8069
-```
-
-4. Start the development server:
-```bash
+npm run dev
+# or
+yarn dev
+# or
 pnpm dev
+# or
+bun dev
 ```
 
-The application will be available at [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Development
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Uses Next.js 15 App Router for routing
-- Server Components and Server Actions for optimal performance
-- TypeScript for type safety
-- Tailwind CSS for styling
-- shadcn/ui for UI components
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### Key Features Implementation
+## Learn More
 
-- **Authentication**: Custom implementation using Odoo's authentication endpoints
-- **Dashboard**: Real-time user data display with session management
-- **Theme**: Dark/Light mode with system preference detection
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
+To learn more about Next.js, take a look at the following resources:
 
-## Building for Production
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```bash
-pnpm build
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-To start the production server:
-```bash
-pnpm start
-```
+## Deploy on Vercel
 
-## Contributing
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-1. Create a feature branch
-2. Make your changes
-3. Submit a pull request
-
-## License
-
-This project is proprietary software.
-
-## Support
-
-For support and queries:
-- Create an issue in the repository
-- Contact the development team
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
