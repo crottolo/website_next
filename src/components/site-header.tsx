@@ -58,11 +58,11 @@ export function SiteHeader() {
             <NavigationMenuList className='flex gap-6'>
               {menuItems.map((item) => (
                 <NavigationMenuItem key={item.href}>
-                  <Link href={item.href} legacyBehavior passHref>
-                    <NavigationMenuLink className='text-sm font-medium transition-colors hover:text-green-600 dark:hover:text-green-400'>
+                  <NavigationMenuLink asChild className='text-sm font-medium transition-colors hover:text-green-600 dark:hover:text-green-400'>
+                    <Link href={item.href}>
                       {item.label}
-                    </NavigationMenuLink>
-                  </Link>
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>

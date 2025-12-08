@@ -34,13 +34,13 @@ const MenuItemAnimation = {
     x: 0,
     transition: {
       delay: i * 0.1,
-      type: "spring",
+      type: "spring" as const,
       damping: 15,
       stiffness: 300,
     },
   }),
 }
 
-const MenuItem = motion.create(motion.div)
+const MenuItem = motion.div
 
 export { AnimatedSheetContent, MenuItemAnimation, MenuItem } 

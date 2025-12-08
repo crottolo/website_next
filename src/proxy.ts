@@ -7,7 +7,7 @@ const protectedPaths = ["/dashboard"];
 // Add paths that should not be accessible when authenticated
 const authPaths = ["/signin", "/register"];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const currentUser = request.cookies.get("session_id");
   const { pathname } = request.nextUrl;
 
